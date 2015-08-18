@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.timecommerce.timetrade.com/ws" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="AppointmentServices" targetNamespace="http://services.timecommerce.timetrade.com/ws" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="UsernameToken" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" />
+          </wsp:Policy>
+        </sp:SupportingTokens>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://bbuydev2api.timetradesystems.com:443/tc/api/6.4/AppointmentServices?xsd=1" namespace="http://services.timecommerce.timetrade.com/ws" />
+    </xsd:schema>
+  </types>
+  <message name="getAPIVersion">
+    <part name="parameters" element="tns:getAPIVersion" />
+  </message>
+  <message name="getAPIVersionResponse">
+    <part name="parameters" element="tns:getAPIVersionResponse" />
+  </message>
+  <message name="TTServiceException">
+    <part name="fault" element="tns:TTServiceException" />
+  </message>
+  <message name="holdAppointment">
+    <part name="parameters" element="tns:holdAppointment" />
+  </message>
+  <message name="holdAppointmentResponse">
+    <part name="parameters" element="tns:holdAppointmentResponse" />
+  </message>
+  <message name="releaseHeldAppointment">
+    <part name="parameters" element="tns:releaseHeldAppointment" />
+  </message>
+  <message name="releaseHeldAppointmentResponse">
+    <part name="parameters" element="tns:releaseHeldAppointmentResponse" />
+  </message>
+  <message name="confirmHeldAppointment">
+    <part name="parameters" element="tns:confirmHeldAppointment" />
+  </message>
+  <message name="confirmHeldAppointmentResponse">
+    <part name="parameters" element="tns:confirmHeldAppointmentResponse" />
+  </message>
+  <message name="getAppointmentByConfirmationNumber">
+    <part name="parameters" element="tns:getAppointmentByConfirmationNumber" />
+  </message>
+  <message name="getAppointmentByConfirmationNumberResponse">
+    <part name="parameters" element="tns:getAppointmentByConfirmationNumberResponse" />
+  </message>
+  <message name="appendAppointmentAnswers">
+    <part name="parameters" element="tns:appendAppointmentAnswers" />
+  </message>
+  <message name="appendAppointmentAnswersResponse">
+    <part name="parameters" element="tns:appendAppointmentAnswersResponse" />
+  </message>
+  <message name="getAvailableNDateTimeSlotsStartFromDate">
+    <part name="parameters" element="tns:getAvailableNDateTimeSlotsStartFromDate" />
+  </message>
+  <message name="getAvailableNDateTimeSlotsStartFromDateResponse">
+    <part name="parameters" element="tns:getAvailableNDateTimeSlotsStartFromDateResponse" />
+  </message>
+  <message name="getAvailableNDateTimeSlotsStartFromDateWithSecondaryResources">
+    <part name="parameters" element="tns:getAvailableNDateTimeSlotsStartFromDateWithSecondaryResources" />
+  </message>
+  <message name="getAvailableNDateTimeSlotsStartFromDateWithSecondaryResourcesResponse">
+    <part name="parameters" element="tns:getAvailableNDateTimeSlotsStartFromDateWithSecondaryResourcesResponse" />
+  </message>
+  <message name="bookAppointment">
+    <part name="parameters" element="tns:bookAppointment" />
+  </message>
+  <message name="bookAppointmentResponse">
+    <part name="parameters" element="tns:bookAppointmentResponse" />
+  </message>
+  <message name="cancelAppointment">
+    <part name="parameters" element="tns:cancelAppointment" />
+  </message>
+  <message name="cancelAppointmentResponse">
+    <part name="parameters" element="tns:cancelAppointmentResponse" />
+  </message>
+  <message name="getAppointmentsByCriteriaAppointmentDateRange">
+    <part name="parameters" element="tns:getAppointmentsByCriteriaAppointmentDateRange" />
+  </message>
+  <message name="getAppointmentsByCriteriaAppointmentDateRangeResponse">
+    <part name="parameters" element="tns:getAppointmentsByCriteriaAppointmentDateRangeResponse" />
+  </message>
+  <message name="checkInAppointment">
+    <part name="parameters" element="tns:checkInAppointment" />
+  </message>
+  <message name="checkInAppointmentResponse">
+    <part name="parameters" element="tns:checkInAppointmentResponse" />
+  </message>
+  <message name="checkOutAppointment">
+    <part name="parameters" element="tns:checkOutAppointment" />
+  </message>
+  <message name="checkOutAppointmentResponse">
+    <part name="parameters" element="tns:checkOutAppointmentResponse" />
+  </message>
+  <message name="updateAppointment">
+    <part name="parameters" element="tns:updateAppointment" />
+  </message>
+  <message name="updateAppointmentResponse">
+    <part name="parameters" element="tns:updateAppointmentResponse" />
+  </message>
+  <message name="rescheduleAppointment">
+    <part name="parameters" element="tns:rescheduleAppointment" />
+  </message>
+  <message name="rescheduleAppointmentResponse">
+    <part name="parameters" element="tns:rescheduleAppointmentResponse" />
+  </message>
+  <message name="getFirstAvailableDateTimeSlotByDateRange">
+    <part name="parameters" element="tns:getFirstAvailableDateTimeSlotByDateRange" />
+  </message>
+  <message name="getFirstAvailableDateTimeSlotByDateRangeResponse">
+    <part name="parameters" element="tns:getFirstAvailableDateTimeSlotByDateRangeResponse" />
+  </message>
+  <message name="getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResources">
+    <part name="parameters" element="tns:getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResources" />
+  </message>
+  <message name="getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResourcesResponse">
+    <part name="parameters" element="tns:getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResourcesResponse" />
+  </message>
+  <message name="getFirstAvailableDateTimeSlotsByDateRangeDaily">
+    <part name="parameters" element="tns:getFirstAvailableDateTimeSlotsByDateRangeDaily" />
+  </message>
+  <message name="getFirstAvailableDateTimeSlotsByDateRangeDailyResponse">
+    <part name="parameters" element="tns:getFirstAvailableDateTimeSlotsByDateRangeDailyResponse" />
+  </message>
+  <message name="getFirstAvailableDateTimeSlotsByDateRangeDailyWithSecondaryResources">
+    <part name="parameters" element="tns:getFirstAvailableDateTimeSlotsByDateRangeDailyWithSecondaryResources" />
+  </message>
+  <message name="getFirstAvailableDateTimeSlotsByDateRangeDailyWithSecondaryResourcesResponse">
+    <part name="parameters" element="tns:getFirstAvailableDateTimeSlotsByDateRangeDailyWithSecondaryResourcesResponse" />
+  </message>
+  <message name="getAppointmentAnswersByAppointmentConfirmationNumber">
+    <part name="parameters" element="tns:getAppointmentAnswersByAppointmentConfirmationNumber" />
+  </message>
+  <message name="getAppointmentAnswersByAppointmentConfirmationNumberResponse">
+    <part name="parameters" element="tns:getAppointmentAnswersByAppointmentConfirmationNumberResponse" />
+  </message>
+  <message name="getAvailableNDateTimeSlotsStartFromDateWithGridFilter">
+    <part name="parameters" element="tns:getAvailableNDateTimeSlotsStartFromDateWithGridFilter" />
+  </message>
+  <message name="getAvailableNDateTimeSlotsStartFromDateWithGridFilterResponse">
+    <part name="parameters" element="tns:getAvailableNDateTimeSlotsStartFromDateWithGridFilterResponse" />
+  </message>
+  <message name="getFirstAvailableDateTimeSlotByDateRangeWithGridFilter">
+    <part name="parameters" element="tns:getFirstAvailableDateTimeSlotByDateRangeWithGridFilter" />
+  </message>
+  <message name="getFirstAvailableDateTimeSlotByDateRangeWithGridFilterResponse">
+    <part name="parameters" element="tns:getFirstAvailableDateTimeSlotByDateRangeWithGridFilterResponse" />
+  </message>
+  <message name="getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilter">
+    <part name="parameters" element="tns:getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilter" />
+  </message>
+  <message name="getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilterResponse">
+    <part name="parameters" element="tns:getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilterResponse" />
+  </message>
+  <message name="getAppointmentsByClientAppointmentDateRange">
+    <part name="parameters" element="tns:getAppointmentsByClientAppointmentDateRange" />
+  </message>
+  <message name="getAppointmentsByClientAppointmentDateRangeResponse">
+    <part name="parameters" element="tns:getAppointmentsByClientAppointmentDateRangeResponse" />
+  </message>
+  <message name="getAppointmentsByCriteriaCreateDateRange">
+    <part name="parameters" element="tns:getAppointmentsByCriteriaCreateDateRange" />
+  </message>
+  <message name="getAppointmentsByCriteriaCreateDateRangeResponse">
+    <part name="parameters" element="tns:getAppointmentsByCriteriaCreateDateRangeResponse" />
+  </message>
+  <message name="bookAdhocAppointmentSimple">
+    <part name="parameters" element="tns:bookAdhocAppointmentSimple" />
+  </message>
+  <message name="bookAdhocAppointmentSimpleResponse">
+    <part name="parameters" element="tns:bookAdhocAppointmentSimpleResponse" />
+  </message>
+  <message name="getAppointmentsByClientAppointmentDateRangeWithClient">
+    <part name="parameters" element="tns:getAppointmentsByClientAppointmentDateRangeWithClient" />
+  </message>
+  <message name="getAppointmentsByClientAppointmentDateRangeWithClientResponse">
+    <part name="parameters" element="tns:getAppointmentsByClientAppointmentDateRangeWithClientResponse" />
+  </message>
+  <message name="getAppointmentsByCriteriaAppointmentDateRangeWithClient">
+    <part name="parameters" element="tns:getAppointmentsByCriteriaAppointmentDateRangeWithClient" />
+  </message>
+  <message name="getAppointmentsByCriteriaAppointmentDateRangeWithClientResponse">
+    <part name="parameters" element="tns:getAppointmentsByCriteriaAppointmentDateRangeWithClientResponse" />
+  </message>
+  <message name="getAppointmentsByCriteriaCreateDateRangeWithClient">
+    <part name="parameters" element="tns:getAppointmentsByCriteriaCreateDateRangeWithClient" />
+  </message>
+  <message name="getAppointmentsByCriteriaCreateDateRangeWithClientResponse">
+    <part name="parameters" element="tns:getAppointmentsByCriteriaCreateDateRangeWithClientResponse" />
+  </message>
+  <message name="getAppointmentWithClientByConfirmationNumber">
+    <part name="parameters" element="tns:getAppointmentWithClientByConfirmationNumber" />
+  </message>
+  <message name="getAppointmentWithClientByConfirmationNumberResponse">
+    <part name="parameters" element="tns:getAppointmentWithClientByConfirmationNumberResponse" />
+  </message>
+  <message name="bookAppointmentAdHoc">
+    <part name="parameters" element="tns:bookAppointmentAdHoc" />
+  </message>
+  <message name="bookAppointmentAdHocResponse">
+    <part name="parameters" element="tns:bookAppointmentAdHocResponse" />
+  </message>
+  <message name="bookCompoundAppointment">
+    <part name="parameters" element="tns:bookCompoundAppointment" />
+  </message>
+  <message name="bookCompoundAppointmentResponse">
+    <part name="parameters" element="tns:bookCompoundAppointmentResponse" />
+  </message>
+  <message name="rescheduleCompoundAppointment">
+    <part name="parameters" element="tns:rescheduleCompoundAppointment" />
+  </message>
+  <message name="rescheduleCompoundAppointmentResponse">
+    <part name="parameters" element="tns:rescheduleCompoundAppointmentResponse" />
+  </message>
+  <message name="cancelCompoundAppointment">
+    <part name="parameters" element="tns:cancelCompoundAppointment" />
+  </message>
+  <message name="cancelCompoundAppointmentResponse">
+    <part name="parameters" element="tns:cancelCompoundAppointmentResponse" />
+  </message>
+  <message name="getCompoundAppointmentByConfirmationNumber">
+    <part name="parameters" element="tns:getCompoundAppointmentByConfirmationNumber" />
+  </message>
+  <message name="getCompoundAppointmentByConfirmationNumberResponse">
+    <part name="parameters" element="tns:getCompoundAppointmentByConfirmationNumberResponse" />
+  </message>
+  <message name="getCompoundAppointmentsByCriteriaAppointmentDateRange">
+    <part name="parameters" element="tns:getCompoundAppointmentsByCriteriaAppointmentDateRange" />
+  </message>
+  <message name="getCompoundAppointmentsByCriteriaAppointmentDateRangeResponse">
+    <part name="parameters" element="tns:getCompoundAppointmentsByCriteriaAppointmentDateRangeResponse" />
+  </message>
+  <message name="getCompoundAvailabilityNDateTimeSlotsStartFromDate">
+    <part name="parameters" element="tns:getCompoundAvailabilityNDateTimeSlotsStartFromDate" />
+  </message>
+  <message name="getCompoundAvailabilityNDateTimeSlotsStartFromDateResponse">
+    <part name="parameters" element="tns:getCompoundAvailabilityNDateTimeSlotsStartFromDateResponse" />
+  </message>
+  <message name="getFirstCompoundAvailableDateTimeSlotByDateRange">
+    <part name="parameters" element="tns:getFirstCompoundAvailableDateTimeSlotByDateRange" />
+  </message>
+  <message name="getFirstCompoundAvailableDateTimeSlotByDateRangeResponse">
+    <part name="parameters" element="tns:getFirstCompoundAvailableDateTimeSlotByDateRangeResponse" />
+  </message>
+  <message name="getFirstCompoundAvailableDateTimeSlotsByDateRangeDaily">
+    <part name="parameters" element="tns:getFirstCompoundAvailableDateTimeSlotsByDateRangeDaily" />
+  </message>
+  <message name="getFirstCompoundAvailableDateTimeSlotsByDateRangeDailyResponse">
+    <part name="parameters" element="tns:getFirstCompoundAvailableDateTimeSlotsByDateRangeDailyResponse" />
+  </message>
+  <message name="getAppointmentsByCriteriaChanged">
+    <part name="parameters" element="tns:getAppointmentsByCriteriaChanged" />
+  </message>
+  <message name="getAppointmentsByCriteriaChangedResponse">
+    <part name="parameters" element="tns:getAppointmentsByCriteriaChangedResponse" />
+  </message>
+  <message name="getCompoundAppointmentsByCriteriaChanged">
+    <part name="parameters" element="tns:getCompoundAppointmentsByCriteriaChanged" />
+  </message>
+  <message name="getCompoundAppointmentsByCriteriaChangedResponse">
+    <part name="parameters" element="tns:getCompoundAppointmentsByCriteriaChangedResponse" />
+  </message>
+  <message name="updateCompoundAppointment">
+    <part name="parameters" element="tns:updateCompoundAppointment" />
+  </message>
+  <message name="updateCompoundAppointmentResponse">
+    <part name="parameters" element="tns:updateCompoundAppointmentResponse" />
+  </message>
+  <message name="bookCompoundAppointmentAdHoc">
+    <part name="parameters" element="tns:bookCompoundAppointmentAdHoc" />
+  </message>
+  <message name="bookCompoundAppointmentAdHocResponse">
+    <part name="parameters" element="tns:bookCompoundAppointmentAdHocResponse" />
+  </message>
+  <message name="setAppointmentLifeCycleState">
+    <part name="parameters" element="tns:setAppointmentLifeCycleState" />
+  </message>
+  <message name="setAppointmentLifeCycleStateResponse">
+    <part name="parameters" element="tns:setAppointmentLifeCycleStateResponse" />
+  </message>
+  <message name="getAllAppointmentLifeCycleHistoryByConfirmation">
+    <part name="parameters" element="tns:getAllAppointmentLifeCycleHistoryByConfirmation" />
+  </message>
+  <message name="getAllAppointmentLifeCycleHistoryByConfirmationResponse">
+    <part name="parameters" element="tns:getAllAppointmentLifeCycleHistoryByConfirmationResponse" />
+  </message>
+  <message name="getAppointmentLifeCycleHistoryByCriteriaAuditDateRange">
+    <part name="parameters" element="tns:getAppointmentLifeCycleHistoryByCriteriaAuditDateRange" />
+  </message>
+  <message name="getAppointmentLifeCycleHistoryByCriteriaAuditDateRangeResponse">
+    <part name="parameters" element="tns:getAppointmentLifeCycleHistoryByCriteriaAuditDateRangeResponse" />
+  </message>
+  <portType name="AppointmentServices">
+    <operation name="getAPIVersion">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAPIVersionRequest" message="tns:getAPIVersion" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAPIVersionResponse" message="tns:getAPIVersionResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAPIVersion/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="holdAppointment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/holdAppointmentRequest" message="tns:holdAppointment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/holdAppointmentResponse" message="tns:holdAppointmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/holdAppointment/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="releaseHeldAppointment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/releaseHeldAppointmentRequest" message="tns:releaseHeldAppointment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/releaseHeldAppointmentResponse" message="tns:releaseHeldAppointmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/releaseHeldAppointment/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="confirmHeldAppointment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/confirmHeldAppointmentRequest" message="tns:confirmHeldAppointment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/confirmHeldAppointmentResponse" message="tns:confirmHeldAppointmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/confirmHeldAppointment/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getAppointmentByConfirmationNumber">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentByConfirmationNumberRequest" message="tns:getAppointmentByConfirmationNumber" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentByConfirmationNumberResponse" message="tns:getAppointmentByConfirmationNumberResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentByConfirmationNumber/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="appendAppointmentAnswers">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/appendAppointmentAnswersRequest" message="tns:appendAppointmentAnswers" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/appendAppointmentAnswersResponse" message="tns:appendAppointmentAnswersResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/appendAppointmentAnswers/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getAvailableNDateTimeSlotsStartFromDate">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAvailableNDateTimeSlotsStartFromDateRequest" message="tns:getAvailableNDateTimeSlotsStartFromDate" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAvailableNDateTimeSlotsStartFromDateResponse" message="tns:getAvailableNDateTimeSlotsStartFromDateResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAvailableNDateTimeSlotsStartFromDate/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getAvailableNDateTimeSlotsStartFromDateWithSecondaryResources">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAvailableNDateTimeSlotsStartFromDateRequestWithSecondaryResources" message="tns:getAvailableNDateTimeSlotsStartFromDateWithSecondaryResources" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAvailableNDateTimeSlotsStartFromDateWithSecondaryResourcesWithSecondaryResourcesResponse" message="tns:getAvailableNDateTimeSlotsStartFromDateWithSecondaryResourcesResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAvailableNDateTimeSlotsStartFromDateWithSecondaryResources/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="bookAppointment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/bookAppointmentRequest" message="tns:bookAppointment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/bookAppointmentResponse" message="tns:bookAppointmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/bookAppointment/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="cancelAppointment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/cancelAppointmentRequest" message="tns:cancelAppointment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/cancelAppointmentResponse" message="tns:cancelAppointmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/cancelAppointment/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getAppointmentsByCriteriaAppointmentDateRange">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByCriteriaAppointmentDateRangeRequest" message="tns:getAppointmentsByCriteriaAppointmentDateRange" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByCriteriaAppointmentDateRangeResponse" message="tns:getAppointmentsByCriteriaAppointmentDateRangeResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByCriteriaAppointmentDateRange/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="checkInAppointment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/checkInAppointmentRequest" message="tns:checkInAppointment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/checkInAppointmentResponse" message="tns:checkInAppointmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/checkInAppointment/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="checkOutAppointment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/checkOutAppointmentRequest" message="tns:checkOutAppointment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/checkOutAppointmentResponse" message="tns:checkOutAppointmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/checkOutAppointment/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="updateAppointment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/updateAppointmentRequest" message="tns:updateAppointment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/updateAppointmentResponse" message="tns:updateAppointmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/updateAppointment/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="rescheduleAppointment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/rescheduleAppointmentRequest" message="tns:rescheduleAppointment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/rescheduleAppointmentResponse" message="tns:rescheduleAppointmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/rescheduleAppointment/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getFirstAvailableDateTimeSlotByDateRange">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotByDateRangeRequest" message="tns:getFirstAvailableDateTimeSlotByDateRange" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotByDateRangeResponse" message="tns:getFirstAvailableDateTimeSlotByDateRangeResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotByDateRange/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResources">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotByDateRangeRequestWithSecondaryResources" message="tns:getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResources" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResourcesResponse" message="tns:getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResourcesResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResources/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getFirstAvailableDateTimeSlotsByDateRangeDaily">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotsByDateRangeDailyRequest" message="tns:getFirstAvailableDateTimeSlotsByDateRangeDaily" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotsByDateRangeDailyResponse" message="tns:getFirstAvailableDateTimeSlotsByDateRangeDailyResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotsByDateRangeDaily/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getFirstAvailableDateTimeSlotsByDateRangeDailyWithSecondaryResources">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotsByDateRangeDailyWithSecondaryResourcesRequest" message="tns:getFirstAvailableDateTimeSlotsByDateRangeDailyWithSecondaryResources" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotsByDateRangeDailyWithSecondaryResourcesResponse" message="tns:getFirstAvailableDateTimeSlotsByDateRangeDailyWithSecondaryResourcesResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotsByDateRangeDailyWithSecondaryResources/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getAppointmentAnswersByAppointmentConfirmationNumber">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentAnswersByAppointmentConfirmationNumberRequest" message="tns:getAppointmentAnswersByAppointmentConfirmationNumber" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentAnswersByAppointmentConfirmationNumberResponse" message="tns:getAppointmentAnswersByAppointmentConfirmationNumberResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentAnswersByAppointmentConfirmationNumber/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getAvailableNDateTimeSlotsStartFromDateWithGridFilter">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAvailableNDateTimeSlotsStartFromDateWithGridFilterRequest" message="tns:getAvailableNDateTimeSlotsStartFromDateWithGridFilter" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAvailableNDateTimeSlotsStartFromDateWithGridFilterResponse" message="tns:getAvailableNDateTimeSlotsStartFromDateWithGridFilterResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAvailableNDateTimeSlotsStartFromDateWithGridFilter/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getFirstAvailableDateTimeSlotByDateRangeWithGridFilter">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotByDateRangeWithGridFilterRequest" message="tns:getFirstAvailableDateTimeSlotByDateRangeWithGridFilter" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotByDateRangeWithGridFilterResponse" message="tns:getFirstAvailableDateTimeSlotByDateRangeWithGridFilterResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotByDateRangeWithGridFilter/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilter">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilterRequest" message="tns:getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilter" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilterResponse" message="tns:getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilterResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilter/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getAppointmentsByClientAppointmentDateRange">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByClientAppointmentDateRangeRequest" message="tns:getAppointmentsByClientAppointmentDateRange" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByClientAppointmentDateRangeResponse" message="tns:getAppointmentsByClientAppointmentDateRangeResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByClientAppointmentDateRange/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getAppointmentsByCriteriaCreateDateRange">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByCriteriaCreateDateRangeRequest" message="tns:getAppointmentsByCriteriaCreateDateRange" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByCriteriaCreateDateRangeResponse" message="tns:getAppointmentsByCriteriaCreateDateRangeResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByCriteriaCreateDateRange/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="bookAdhocAppointmentSimple">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/bookAdhocAppointmentSimpleRequest" message="tns:bookAdhocAppointmentSimple" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/bookAdhocAppointmentSimpleResponse" message="tns:bookAdhocAppointmentSimpleResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/bookAdhocAppointmentSimple/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getAppointmentsByClientAppointmentDateRangeWithClient">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByClientAppointmentDateRangeWithClientRequest" message="tns:getAppointmentsByClientAppointmentDateRangeWithClient" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByClientAppointmentDateRangeWithClientResponse" message="tns:getAppointmentsByClientAppointmentDateRangeWithClientResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByClientAppointmentDateRangeWithClient/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getAppointmentsByCriteriaAppointmentDateRangeWithClient">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByCriteriaAppointmentDateRangeWithClientRequest" message="tns:getAppointmentsByCriteriaAppointmentDateRangeWithClient" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByCriteriaAppointmentDateRangeWithClientResponse" message="tns:getAppointmentsByCriteriaAppointmentDateRangeWithClientResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByCriteriaAppointmentDateRangeWithClient/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getAppointmentsByCriteriaCreateDateRangeWithClient">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByCriteriaCreateDateRangeWithClientRequest" message="tns:getAppointmentsByCriteriaCreateDateRangeWithClient" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByCriteriaCreateDateRangeWithClientResponse" message="tns:getAppointmentsByCriteriaCreateDateRangeWithClientResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByCriteriaCreateDateRangeWithClient/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getAppointmentWithClientByConfirmationNumber">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentWithClientByConfirmationNumberRequest" message="tns:getAppointmentWithClientByConfirmationNumber" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentWithClientByConfirmationNumberResponse" message="tns:getAppointmentWithClientByConfirmationNumberResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentWithClientByConfirmationNumber/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="bookAppointmentAdHoc">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/bookAppointmentAdHocRequest" message="tns:bookAppointmentAdHoc" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/bookAppointmentAdHocResponse" message="tns:bookAppointmentAdHocResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/bookAppointmentAdHoc/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="bookCompoundAppointment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/bookCompoundAppointmentRequest" message="tns:bookCompoundAppointment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/bookCompoundAppointmentResponse" message="tns:bookCompoundAppointmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/bookCompoundAppointment/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="rescheduleCompoundAppointment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/rescheduleCompoundAppointmentRequest" message="tns:rescheduleCompoundAppointment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/rescheduleCompoundAppointmentResponse" message="tns:rescheduleCompoundAppointmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/rescheduleCompoundAppointment/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="cancelCompoundAppointment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/cancelCompoundAppointmentRequest" message="tns:cancelCompoundAppointment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/cancelCompoundAppointmentResponse" message="tns:cancelCompoundAppointmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/cancelCompoundAppointment/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getCompoundAppointmentByConfirmationNumber">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getCompoundAppointmentByConfirmationNumberRequest" message="tns:getCompoundAppointmentByConfirmationNumber" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getCompoundAppointmentByConfirmationNumberResponse" message="tns:getCompoundAppointmentByConfirmationNumberResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getCompoundAppointmentByConfirmationNumber/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getCompoundAppointmentsByCriteriaAppointmentDateRange">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getCompoundAppointmentsByCriteriaAppointmentDateRangeRequest" message="tns:getCompoundAppointmentsByCriteriaAppointmentDateRange" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getCompoundAppointmentsByCriteriaAppointmentDateRangeResponse" message="tns:getCompoundAppointmentsByCriteriaAppointmentDateRangeResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getCompoundAppointmentsByCriteriaAppointmentDateRange/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getCompoundAvailabilityNDateTimeSlotsStartFromDate">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getCompoundAvailabilityNDateTimeSlotsStartFromDateRequest" message="tns:getCompoundAvailabilityNDateTimeSlotsStartFromDate" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getCompoundAvailabilityNDateTimeSlotsStartFromDateResponse" message="tns:getCompoundAvailabilityNDateTimeSlotsStartFromDateResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getCompoundAvailabilityNDateTimeSlotsStartFromDate/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getFirstCompoundAvailableDateTimeSlotByDateRange">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstCompoundAvailableDateTimeSlotByDateRangeRequest" message="tns:getFirstCompoundAvailableDateTimeSlotByDateRange" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstCompoundAvailableDateTimeSlotByDateRangeResponse" message="tns:getFirstCompoundAvailableDateTimeSlotByDateRangeResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstCompoundAvailableDateTimeSlotByDateRange/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getFirstCompoundAvailableDateTimeSlotsByDateRangeDaily">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstCompoundAvailableDateTimeSlotsByDateRangeDailyRequest" message="tns:getFirstCompoundAvailableDateTimeSlotsByDateRangeDaily" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstCompoundAvailableDateTimeSlotsByDateRangeDailyResponse" message="tns:getFirstCompoundAvailableDateTimeSlotsByDateRangeDailyResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getFirstCompoundAvailableDateTimeSlotsByDateRangeDaily/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getAppointmentsByCriteriaChanged">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByCriteriaChangedRequest" message="tns:getAppointmentsByCriteriaChanged" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByCriteriaChangedResponse" message="tns:getAppointmentsByCriteriaChangedResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentsByCriteriaChanged/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getCompoundAppointmentsByCriteriaChanged">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getCompoundAppointmentsByCriteriaChangedRequest" message="tns:getCompoundAppointmentsByCriteriaChanged" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getCompoundAppointmentsByCriteriaChangedResponse" message="tns:getCompoundAppointmentsByCriteriaChangedResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getCompoundAppointmentsByCriteriaChanged/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="updateCompoundAppointment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/updateCompoundAppointmentRequest" message="tns:updateCompoundAppointment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/updateCompoundAppointmentResponse" message="tns:updateCompoundAppointmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/updateCompoundAppointment/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="bookCompoundAppointmentAdHoc">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/bookCompoundAppointmentAdHocRequest" message="tns:bookCompoundAppointmentAdHoc" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/bookCompoundAppointmentAdHocResponse" message="tns:bookCompoundAppointmentAdHocResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/bookCompoundAppointmentAdHoc/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="setAppointmentLifeCycleState">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/setAppointmentLifeCycleStateRequest" message="tns:setAppointmentLifeCycleState" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/setAppointmentLifeCycleStateResponse" message="tns:setAppointmentLifeCycleStateResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/setAppointmentLifeCycleState/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getAllAppointmentLifeCycleHistoryByConfirmation">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAllAppointmentLifeCycleHistoryByConfirmationRequest" message="tns:getAllAppointmentLifeCycleHistoryByConfirmation" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAllAppointmentLifeCycleHistoryByConfirmationResponse" message="tns:getAllAppointmentLifeCycleHistoryByConfirmationResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAllAppointmentLifeCycleHistoryByConfirmation/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+    <operation name="getAppointmentLifeCycleHistoryByCriteriaAuditDateRange">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentLifeCycleHistoryByCriteriaAuditDateRangeRequest" message="tns:getAppointmentLifeCycleHistoryByCriteriaAuditDateRange" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentLifeCycleHistoryByCriteriaAuditDateRangeResponse" message="tns:getAppointmentLifeCycleHistoryByCriteriaAuditDateRangeResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/AppointmentServices/getAppointmentLifeCycleHistoryByCriteriaAuditDateRange/Fault/TTServiceException" name="TTServiceException" message="tns:TTServiceException" />
+    </operation>
+  </portType>
+  <binding name="AppointmentWSBinding" type="tns:AppointmentServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsp:PolicyReference URI="#UsernameToken" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" />
+    <operation name="getAPIVersion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="holdAppointment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="releaseHeldAppointment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="confirmHeldAppointment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAppointmentByConfirmationNumber">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="appendAppointmentAnswers">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAvailableNDateTimeSlotsStartFromDate">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAvailableNDateTimeSlotsStartFromDateWithSecondaryResources">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="bookAppointment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="cancelAppointment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAppointmentsByCriteriaAppointmentDateRange">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="checkInAppointment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="checkOutAppointment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateAppointment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="rescheduleAppointment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getFirstAvailableDateTimeSlotByDateRange">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResources">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getFirstAvailableDateTimeSlotsByDateRangeDaily">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getFirstAvailableDateTimeSlotsByDateRangeDailyWithSecondaryResources">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAppointmentAnswersByAppointmentConfirmationNumber">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAvailableNDateTimeSlotsStartFromDateWithGridFilter">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getFirstAvailableDateTimeSlotByDateRangeWithGridFilter">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilter">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAppointmentsByClientAppointmentDateRange">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAppointmentsByCriteriaCreateDateRange">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="bookAdhocAppointmentSimple">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAppointmentsByClientAppointmentDateRangeWithClient">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAppointmentsByCriteriaAppointmentDateRangeWithClient">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAppointmentsByCriteriaCreateDateRangeWithClient">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAppointmentWithClientByConfirmationNumber">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="bookAppointmentAdHoc">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="bookCompoundAppointment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="rescheduleCompoundAppointment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="cancelCompoundAppointment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getCompoundAppointmentByConfirmationNumber">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getCompoundAppointmentsByCriteriaAppointmentDateRange">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getCompoundAvailabilityNDateTimeSlotsStartFromDate">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getFirstCompoundAvailableDateTimeSlotByDateRange">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getFirstCompoundAvailableDateTimeSlotsByDateRangeDaily">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAppointmentsByCriteriaChanged">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getCompoundAppointmentsByCriteriaChanged">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateCompoundAppointment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="bookCompoundAppointmentAdHoc">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="setAppointmentLifeCycleState">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAllAppointmentLifeCycleHistoryByConfirmation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAppointmentLifeCycleHistoryByCriteriaAuditDateRange">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTServiceException">
+        <soap:fault use="literal" name="TTServiceException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="AppointmentServices">
+    <port name="AppointmentWS" binding="tns:AppointmentWSBinding">
+      <soap:address location="https://dnd01apl.na.bestbuy.com:8443/ExternalVendor/AppointmentServicesSOAP" />
+    </port>
+  </service>
+</definitions>

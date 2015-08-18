@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Bestbuy.Rest.Timetrade.Service.Service.ConfigReservationRestService" CodeBehind="ConfigReservationRestService.svc.cs" %>

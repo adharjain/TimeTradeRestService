@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns1="http://services.timecommerce.timetrade.com/configuration" xmlns:tns="http://services.timecommerce.timetrade.com/appointment" xmlns:ns2="http://services.timecommerce.timetrade.com/ws" targetNamespace="http://services.timecommerce.timetrade.com/appointment" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://bbuydev2api.timetradesystems.com:443/tc/api/6.4/AppointmentServices?xsd=2" namespace="http://services.timecommerce.timetrade.com/configuration" />
+  <xs:import schemaLocation="https://bbuydev2api.timetradesystems.com:443/tc/api/6.4/AppointmentServices?xsd=1" namespace="http://services.timecommerce.timetrade.com/ws" />
+  <xs:element name="appointmentData" type="tns:appointment" />
+  <xs:element name="appointments" type="tns:appointment" />
+  <xs:complexType name="appointment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activityExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="activityName" type="xs:string" />
+      <xs:element name="appointmentDurationMin" type="xs:int" />
+      <xs:element minOccurs="0" name="appointmentEndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="appointmentStartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="apptOriginName" type="xs:string" />
+      <xs:element minOccurs="0" name="campaignExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="campaignName" type="xs:string" />
+      <xs:element minOccurs="0" name="campaignTimezone" type="xs:string" />
+      <xs:element name="cancelled" type="xs:boolean" />
+      <xs:element name="checkedIn" type="xs:boolean" />
+      <xs:element name="checkedOut" type="xs:boolean" />
+      <xs:element minOccurs="0" name="clientExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="clientFirstname" type="xs:string" />
+      <xs:element minOccurs="0" name="clientLastname" type="xs:string" />
+      <xs:element minOccurs="0" name="clientTimezone" type="xs:string" />
+      <xs:element minOccurs="0" name="confirmationNumber" type="xs:string" />
+      <xs:element name="confirmed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="createdByExtUserId" type="xs:string" />
+      <xs:element minOccurs="0" name="createdByUserName" type="xs:string" />
+      <xs:element minOccurs="0" name="createdDate" type="xs:string" />
+      <xs:element minOccurs="0" name="custom0" type="xs:string" />
+      <xs:element minOccurs="0" name="custom1" type="xs:string" />
+      <xs:element minOccurs="0" name="custom2" type="xs:string" />
+      <xs:element minOccurs="0" name="custom3" type="xs:string" />
+      <xs:element minOccurs="0" name="custom4" type="xs:string" />
+      <xs:element minOccurs="0" name="custom5" type="xs:string" />
+      <xs:element minOccurs="0" name="custom6" type="xs:string" />
+      <xs:element minOccurs="0" name="custom7" type="xs:string" />
+      <xs:element minOccurs="0" name="custom8" type="xs:string" />
+      <xs:element minOccurs="0" name="custom9" type="xs:string" />
+      <xs:element name="lateCanceled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element name="numberOfAttendees" type="xs:int" />
+      <xs:element minOccurs="0" name="programExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="programName" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourcepool" type="ns2:resourcepool" />
+      <xs:element name="setupDurationMin" type="xs:int" />
+      <xs:element name="walkIn" type="xs:boolean" />
+      <xs:element minOccurs="0" name="comments" type="xs:string" />
+      <xs:element minOccurs="0" name="workFlowId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="characteristics" nillable="true" type="ns2:characteristic" />
+      <xs:element minOccurs="0" name="compoundAppointmentConfirmationNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="lifeCycleState" type="ns2:appointmentLifeCycleState" />
+      <xs:element minOccurs="0" name="lastModifiedDateTime" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

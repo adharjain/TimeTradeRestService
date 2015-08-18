@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.timecommerce.timetrade.com/configuration" xmlns:ns1="http://services.timecommerce.timetrade.com/ws" targetNamespace="http://services.timecommerce.timetrade.com/configuration" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://bbuydev2api.timetradesystems.com:443/tc/api/6.4/ConfigurationServices?xsd=1" namespace="http://services.timecommerce.timetrade.com/ws" />
+  <xs:element name="resources" type="tns:resource" />
+  <xs:complexType name="resource">
+    <xs:sequence>
+      <xs:element name="deleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="deletedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element minOccurs="0" name="emailAddressData" type="ns1:emailAddressData" />
+      <xs:element minOccurs="0" name="gender" type="ns1:gender" />
+      <xs:element minOccurs="0" name="isAlwaysAvailable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="phoneData" type="ns1:phoneData" />
+      <xs:element minOccurs="0" name="propertyGroupExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceName" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceRules" type="ns1:resourceRules" />
+      <xs:element minOccurs="0" name="timezone" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="schedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activityExternalId" type="xs:string" />
+      <xs:element name="applyDateRange" type="xs:boolean" />
+      <xs:element name="applyMaxAppointmentsPerDay" type="xs:boolean" />
+      <xs:element minOccurs="0" name="campaignExternalId" type="xs:string" />
+      <xs:element name="enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element name="maxAppointmentsPerDay" type="xs:int" />
+      <xs:element minOccurs="0" name="monthlySubSchedule" type="ns1:monthlySubSchedule" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="oneTimeSubSchedule" type="ns1:oneTimeSubSchedule" />
+      <xs:element minOccurs="0" name="programExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleRangeEndDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="scheduleRangeStartDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="weeklySubSchedule" type="ns1:weeklySubSchedule" />
+      <xs:element minOccurs="0" name="yearlySubSchedule" type="ns1:yearlySubSchedule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="activity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activityExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="activityName" type="xs:string" />
+      <xs:element minOccurs="0" name="activityRules" type="ns1:activityRules" />
+      <xs:element minOccurs="0" name="appointmentGroupType" type="ns1:appointmentGroupType" />
+      <xs:element name="capacity" type="xs:int" />
+      <xs:element name="defaultRecoveryTime" type="xs:int" />
+      <xs:element name="deleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="deletedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="glCode" type="xs:string" />
+      <xs:element minOccurs="0" name="isEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="paymentDescription" type="xs:string" />
+      <xs:element minOccurs="0" name="propertyGroupExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleType" type="ns1:scheduleType" />
+      <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="activityDurations" type="ns1:activityDuration" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="suppressVisibilityPerApp" nillable="true" type="ns1:suppressVisibilityPerApp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="location">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyAddress" type="ns1:address" />
+      <xs:element minOccurs="0" name="createDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="deletedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element minOccurs="0" name="emailAddress" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" type="xs:string" />
+      <xs:element minOccurs="0" name="isAppointmentQueueEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isCampaignEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isInternalSite" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isTestDrive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="jobTitle" type="xs:string" />
+      <xs:element minOccurs="0" name="lastName" type="xs:string" />
+      <xs:element minOccurs="0" name="locationAvailabilityType" type="ns1:locationAvailabilityType" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="locationName" type="xs:string" />
+      <xs:element minOccurs="0" name="locationUrl" type="xs:string" />
+      <xs:element minOccurs="0" name="phoneNumbers" type="ns1:phoneData" />
+      <xs:element minOccurs="0" name="propertyGroupExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleEndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="scheduleStartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="signInUrl" type="xs:string" />
+      <xs:element minOccurs="0" name="timezone" type="xs:string" />
+      <xs:element name="welcomeScreenEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="geocoordinates" type="ns1:geoCoordinates" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

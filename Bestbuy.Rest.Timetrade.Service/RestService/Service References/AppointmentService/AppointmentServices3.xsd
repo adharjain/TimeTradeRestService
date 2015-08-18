@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns1="http://services.timecommerce.timetrade.com/appointment" xmlns:tns="http://services.timecommerce.timetrade.com/ws" xmlns:ns2="http://services.timecommerce.timetrade.com/client" xmlns:ns3="http://services.timecommerce.timetrade.com/configuration" targetNamespace="http://services.timecommerce.timetrade.com/ws" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://bbuydev2api.timetradesystems.com:443/tc/api/6.4/AppointmentServices?xsd=4" namespace="http://services.timecommerce.timetrade.com/appointment" />
+  <xs:import schemaLocation="https://bbuydev2api.timetradesystems.com:443/tc/api/6.4/AppointmentServices?xsd=3" namespace="http://services.timecommerce.timetrade.com/client" />
+  <xs:import schemaLocation="https://bbuydev2api.timetradesystems.com:443/tc/api/6.4/AppointmentServices?xsd=2" namespace="http://services.timecommerce.timetrade.com/configuration" />
+  <xs:element name="TTServiceException" type="tns:TTServiceException" />
+  <xs:element name="appendAppointmentAnswers" type="tns:appendAppointmentAnswers" />
+  <xs:element name="appendAppointmentAnswersResponse" type="tns:appendAppointmentAnswersResponse" />
+  <xs:element name="appointmentAnswer" type="tns:appointmentAnswer" />
+  <xs:element name="appointmentAnswersByAppointmentConfirmationNumber" type="tns:appointmentAnswersByAppointmentConfirmationNumber" />
+  <xs:element name="appointmentAnswersByAppointmentConfirmationNumberResponse" type="tns:appointmentAnswersByAppointmentConfirmationNumberResponse" />
+  <xs:element name="appointmentCriteria" type="tns:appointmentCriteria" />
+  <xs:element name="bookAdhocAppointmentSimple" type="tns:bookAdhocAppointmentSimple" />
+  <xs:element name="bookAdhocAppointmentSimpleResponse" type="tns:bookAdhocAppointmentSimpleResponse" />
+  <xs:element name="bookAppointment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="criteria" type="tns:appointmentCriteria" />
+        <xs:element name="startDateTime" type="xs:dateTime" />
+        <xs:element name="clientExternalId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bookAppointmentAdHoc" type="tns:bookAppointmentAdHoc" />
+  <xs:element name="bookAppointmentAdHocResponse" type="tns:bookAppointmentAdHocResponse" />
+  <xs:element name="bookAppointmentResponse" type="tns:bookAppointmentResponse" />
+  <xs:element name="cancelAppointment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="confirmationNumber" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancelAppointmentResponse" type="tns:cancelAppointmentResponse" />
+  <xs:element name="checkInAppointment" type="tns:checkInAppointment" />
+  <xs:element name="checkInAppointmentResponse" type="tns:checkInAppointmentResponse" />
+  <xs:element name="checkOutAppointment" type="tns:checkOutAppointment" />
+  <xs:element name="checkOutAppointmentResponse" type="tns:checkOutAppointmentResponse" />
+  <xs:element name="confirmHeldAppointment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="holdConfirmationNumber" type="xs:string" />
+        <xs:element name="clientExternalId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="confirmHeldAppointmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="return" type="tns:TTStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAPIVersion" type="tns:getAPIVersion" />
+  <xs:element name="getAPIVersionResponse" type="tns:getAPIVersionResponse" />
+  <xs:element name="getAppointmentAnswersByAppointmentConfirmationNumber" nillable="true" type="tns:appointmentAnswersByAppointmentConfirmationNumber" />
+  <xs:element name="getAppointmentAnswersByAppointmentConfirmationNumberResponse" nillable="true" type="tns:appointmentAnswersByAppointmentConfirmationNumberResponse" />
+  <xs:element name="getAppointmentByConfirmationNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="confirmationNumber" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAppointmentByConfirmationNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="return" type="tns:appointmentByConfirmationNumberStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAppointmentWithClientByConfirmationNumber" type="tns:getAppointmentWithClientByConfirmationNumber" />
+  <xs:element name="getAppointmentWithClientByConfirmationNumberResponse" type="tns:getAppointmentWithClientByConfirmationNumberResponse" />
+  <xs:element name="getAppointmentsByClientAndAppointmentDateRange" type="tns:getAppointmentsByClientAndAppointmentDateRange" />
+  <xs:element name="getAppointmentsByClientAppointmentDateRange" nillable="true" type="tns:getAppointmentsByClientAndAppointmentDateRange" />
+  <xs:element name="getAppointmentsByClientAppointmentDateRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="return" type="tns:appointmentListResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAppointmentsByClientAppointmentDateRangeWithClient" type="tns:getAppointmentsByClientAppointmentDateRangeWithClient" />
+  <xs:element name="getAppointmentsByClientAppointmentDateRangeWithClientResponse" type="tns:getAppointmentsByClientAppointmentDateRangeWithClientResponse" />
+  <xs:element name="getAppointmentsByCriteriaAppointmentDateRange" type="tns:getAppointmentsByCriteriaAppointmentDateRange" />
+  <xs:element name="getAppointmentsByCriteriaAppointmentDateRangeResponse" type="tns:getAppointmentsByCriteriaAppointmentDateRangeResponse" />
+  <xs:element name="getAppointmentsByCriteriaAppointmentDateRangeWithClient" type="tns:getAppointmentsByCriteriaAppointmentDateRangeWithClient" />
+  <xs:element name="getAppointmentsByCriteriaAppointmentDateRangeWithClientResponse" type="tns:getAppointmentsByCriteriaAppointmentDateRangeWithClientResponse" />
+  <xs:element name="getAppointmentsByCriteriaCreateDateRange" type="tns:getAppointmentsByCriteriaCreateDateRange" />
+  <xs:element name="getAppointmentsByCriteriaCreateDateRangeResponse" type="tns:getAppointmentsByCriteriaCreateDateRangeResponse" />
+  <xs:element name="getAppointmentsByCriteriaCreateDateRangeWithClient" type="tns:getAppointmentsByCriteriaCreateDateRangeWithClient" />
+  <xs:element name="getAppointmentsByCriteriaCreateDateRangeWithClientResponse" type="tns:getAppointmentsByCriteriaCreateDateRangeWithClientResponse" />
+  <xs:element name="getAvailableNDateTimeSlotsStartFromDate" type="tns:getAvailableNDateTimeSlotsStartFromDate" />
+  <xs:element name="getAvailableNDateTimeSlotsStartFromDateResponse" type="tns:getAvailableNDateTimeSlotsStartFromDateResponse" />
+  <xs:element name="getAvailableNDateTimeSlotsStartFromDateWithSecondaryResources" type="tns:getAvailableNDateTimeSlotsStartFromDateWithSecondaryResources" />
+  <xs:element name="getAvailableNDateTimeSlotsStartFromDateWithSecondaryResourcesResponse" type="tns:getAvailableNDateTimeSlotsStartFromDateWithSecondaryResourcesResponse" />
+  <xs:element name="getAvailableNDateTimeSlotsStartFromDateWithGridFilter" type="tns:getAvailableNDateTimeSlotsStartFromDateWithGridFilter" />
+  <xs:element name="getAvailableNDateTimeSlotsStartFromDateWithGridFilterResponse" type="tns:getAvailableNDateTimeSlotsStartFromDateWithGridFilterResponse" />
+  <xs:element name="getFirstAvailableDateTimeSlotByDateRange" nillable="true" type="tns:getFirstAvailableDateTimeSlotByDateRange" />
+  <xs:element name="getFirstAvailableDateTimeSlotByDateRangeResponse" type="tns:getFirstAvailableDateTimeSlotByDateRangeResponse" />
+  <xs:element name="getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResources" nillable="true" type="tns:getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResources" />
+  <xs:element name="getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResourcesResponse" type="tns:getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResourcesResponse" />
+  <xs:element name="getFirstAvailableDateTimeSlotByDateRangeWithGridFilter" type="tns:getFirstAvailableDateTimeSlotByDateRangeWithGridFilter" />
+  <xs:element name="getFirstAvailableDateTimeSlotByDateRangeWithGridFilterResponse" type="tns:getFirstAvailableDateTimeSlotByDateRangeWithGridFilterResponse" />
+  <xs:element name="getFirstAvailableDateTimeSlotsByDateRangeDaily" nillable="true" type="tns:getFirstAvaliableDateTimeSlotsByDateRangeDaily" />
+  <xs:element name="getFirstAvailableDateTimeSlotsByDateRangeDailyResponse" type="tns:getFirstAvailableDateTimeSlotsByDateRangeDailyResponse" />
+  <xs:element name="getFirstAvailableDateTimeSlotsByDateRangeDailyWithSecondaryResources" nillable="true" type="tns:getFirstAvaliableDateTimeSlotsByDateRangeDailyWithSecondaryResources" />
+  <xs:element name="getFirstAvailableDateTimeSlotsByDateRangeDailyWithSecondaryResourcesResponse" type="tns:getFirstAvailableDateTimeSlotsByDateRangeDailyWithSecondaryResourcesResponse" />
+  <xs:element name="getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilter" type="tns:getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilter" />
+  <xs:element name="getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilterResponse" type="tns:getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilterResponse" />
+  <xs:element name="getFirstAvaliableDateTimeSlotsByDateRangeDaily" type="tns:getFirstAvaliableDateTimeSlotsByDateRangeDaily" />
+  <xs:element name="holdAppointment" type="tns:holdAppointment" />
+  <xs:element name="holdAppointmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="return" type="tns:TTStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="releaseHeldAppointment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="confirmationNumber" type="xs:string" />
+        <xs:element name="clientExternalId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="releaseHeldAppointmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="return" type="tns:TTStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rescheduleAppointment" type="tns:rescheduleAppointment" />
+  <xs:element name="rescheduleAppointmentResponse" type="tns:rescheduleAppointmentResponse" />
+  <xs:element name="updateAppointment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appointment" type="ns1:appointment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateAppointmentResponse" type="tns:updateAppointmentResponse" />
+  <xs:element name="getCompoundAppointmentByConfirmationNumber" type="tns:getCompoundAppointmentByConfirmationNumber" />
+  <xs:element name="getCompoundAppointmentByConfirmationNumberResponse" type="tns:getCompoundAppointmentByConfirmationNumberResponse" />
+  <xs:element name="getCompoundAppointmentsByCriteriaAppointmentDateRange" type="tns:getCompoundAppointmentsByCriteriaAppointmentDateRange" />
+  <xs:element name="getCompoundAppointmentsByCriteriaAppointmentDateRangeResponse" type="tns:getCompoundAppointmentsByCriteriaAppointmentDateRangeResponse" />
+  <xs:element name="getCompoundAvailabilityNDateTimeSlotsStartFromDate" type="tns:getCompoundAvailabilityNDateTimeSlotsStartFromDate" />
+  <xs:element name="getCompoundAvailabilityNDateTimeSlotsStartFromDateResponse" type="tns:getCompoundAvailabilityNDateTimeSlotsStartFromDateResponse" />
+  <xs:element name="getFirstCompoundAvailableDateTimeSlotByDateRange" type="tns:getFirstCompoundAvailableDateTimeSlotByDateRange" />
+  <xs:element name="getFirstCompoundAvailableDateTimeSlotByDateRangeResponse" type="tns:getFirstCompoundAvailableDateTimeSlotByDateRangeResponse" />
+  <xs:element name="getFirstCompoundAvailableDateTimeSlotsByDateRangeDaily" type="tns:getFirstCompoundAvailableDateTimeSlotsByDateRangeDaily" />
+  <xs:element name="getFirstCompoundAvailableDateTimeSlotsByDateRangeDailyResponse" type="tns:getFirstCompoundAvailableDateTimeSlotsByDateRangeDailyResponse" />
+  <xs:element name="getAppointmentsByCriteriaChanged" type="tns:getAppointmentsByCriteriaChanged" />
+  <xs:element name="getAppointmentsByCriteriaChangedResponse" type="tns:getAppointmentsByCriteriaChangedResponse" />
+  <xs:element name="cancelCompoundAppointment" type="tns:cancelCompoundAppointment" />
+  <xs:element name="cancelCompoundAppointmentResponse" type="tns:cancelCompoundAppointmentResponse" />
+  <xs:element name="rescheduleCompoundAppointment" type="tns:rescheduleCompoundAppointment" />
+  <xs:element name="rescheduleCompoundAppointmentResponse" type="tns:rescheduleCompoundAppointmentResponse" />
+  <xs:element name="bookCompoundAppointment" type="tns:bookCompoundAppointment" />
+  <xs:element name="bookCompoundAppointmentResponse" type="tns:bookCompoundAppointmentResponse" />
+  <xs:element name="getCompoundAppointmentsByCriteriaChanged" type="tns:getCompoundAppointmentsByCriteriaChanged" />
+  <xs:element name="getCompoundAppointmentsByCriteriaChangedResponse" type="tns:getCompoundAppointmentsByCriteriaChangedResponse" />
+  <xs:element name="updateCompoundAppointment" type="tns:updateCompoundAppointment" />
+  <xs:element name="updateCompoundAppointmentResponse" type="tns:updateCompoundAppointmentResponse" />
+  <xs:complexType name="getFirstCompoundAvailableDateTimeSlotsByDateRangeDaily">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:compoundAppointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFirstCompoundAvailableDateTimeSlotsByDateRangeDailyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:compoundAvailabilityResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFirstCompoundAvailableDateTimeSlotByDateRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:compoundAppointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFirstCompoundAvailableDateTimeSlotByDateRangeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:compoundAvailabilityResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentsByCriteriaChanged">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentSearchCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentsByCriteriaChangedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:appointmentListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="dateSlot">
+    <xs:sequence>
+      <xs:element name="available" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dateTimeSlots" nillable="true" type="tns:dateTimeSlot" />
+      <xs:element minOccurs="0" name="slotDate" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="dateTimeSlot">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appointmentSlotTime" type="xs:string" />
+      <xs:element name="lengthinMin" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="resourceExternalIds" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="secondaryResourcePool" nillable="true" type="tns:secondaryResourcePool" />
+      <xs:element minOccurs="0" name="slotStatus" type="tns:slotStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentWithClientByConfirmationNumber">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="confirmationNumber" type="xs:string" />
+      <xs:element name="includeCancelledAppointment" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentWithClientByConfirmationNumberResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:appointmentWithClientResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appointmentWithClientResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appointmentWithClientData" type="tns:appointmentWithClient" />
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appointmentWithClient">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:appointmentData" />
+      <xs:element minOccurs="0" ref="ns2:clientData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resourcepool">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="resources" nillable="true" type="ns3:resource" />
+      <xs:element minOccurs="0" name="resourcepoolExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="secondaryResourcePool">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="secondaryResourceInfo" nillable="true" type="ns3:secondaryResourceInfo" />
+      <xs:element minOccurs="0" name="secondaryResourcePoolExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="emailAddressData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="emailAddress" type="xs:string" />
+      <xs:element name="emailEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="emailFormatType" type="tns:emailFormatType" />
+      <xs:element minOccurs="0" name="emailName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="phoneData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fax" type="xs:string" />
+      <xs:element minOccurs="0" name="faxExt" type="xs:string" />
+      <xs:element minOccurs="0" name="homePhone" type="xs:string" />
+      <xs:element minOccurs="0" name="homePhoneExt" type="xs:string" />
+      <xs:element minOccurs="0" name="mobile" type="xs:string" />
+      <xs:element minOccurs="0" name="mobileExt" type="xs:string" />
+      <xs:element minOccurs="0" name="workPhone" type="xs:string" />
+      <xs:element minOccurs="0" name="workPhoneExt" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resourceRules">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="allowConcurrentActivities" type="xs:boolean" />
+      <xs:element minOccurs="0" name="allowScheduleExpansion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="applyAppointmentsAcrossLocations" type="xs:boolean" />
+      <xs:element minOccurs="0" name="applyConcurrentAppointments" type="xs:boolean" />
+      <xs:element minOccurs="0" name="applyRecoveryOnTravel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="applyTimezone" type="xs:boolean" />
+      <xs:element minOccurs="0" name="applyTravelTime" type="xs:boolean" />
+      <xs:element minOccurs="0" name="overlapSetupTravelTime" type="xs:boolean" />
+      <xs:element name="scheduleExpansionLength" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="client">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="answer0" type="xs:string" />
+      <xs:element minOccurs="0" name="answer1" type="xs:string" />
+      <xs:element minOccurs="0" name="answer2" type="xs:string" />
+      <xs:element minOccurs="0" name="answer3" type="xs:string" />
+      <xs:element minOccurs="0" name="answer4" type="xs:string" />
+      <xs:element minOccurs="0" name="answer5" type="xs:string" />
+      <xs:element minOccurs="0" name="answer6" type="xs:string" />
+      <xs:element minOccurs="0" name="answer7" type="xs:string" />
+      <xs:element minOccurs="0" name="answer8" type="xs:string" />
+      <xs:element minOccurs="0" name="answer9" type="xs:string" />
+      <xs:element name="applyTimeZone" type="xs:boolean" />
+      <xs:element minOccurs="0" name="billingAddress" type="tns:address" />
+      <xs:element minOccurs="0" name="comment" type="xs:string" />
+      <xs:element minOccurs="0" name="company" type="xs:string" />
+      <xs:element minOccurs="0" name="contactAddress" type="tns:address" />
+      <xs:element minOccurs="0" name="contactMethod" type="xs:string" />
+      <xs:element minOccurs="0" name="createdDate" type="xs:string" />
+      <xs:element name="customerId" type="xs:int" />
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element minOccurs="0" name="dob" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element name="clientExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" type="xs:string" />
+      <xs:element minOccurs="0" name="gender" type="tns:gender" />
+      <xs:element minOccurs="0" name="jobTitle" type="xs:string" />
+      <xs:element minOccurs="0" name="lastName" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element name="passwordExpired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="phoneData" type="tns:phoneData" />
+      <xs:element minOccurs="0" name="requirePasswordChange" type="xs:boolean" />
+      <xs:element name="rulesGroupExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="salutation" type="xs:string" />
+      <xs:element minOccurs="0" name="timezone" type="xs:string" />
+      <xs:element minOccurs="0" name="title" type="xs:string" />
+      <xs:element name="userGroupExternalId" type="xs:string" />
+      <xs:element name="username" type="xs:string" />
+      <xs:element name="clientStatus" type="tns:status" />
+      <xs:element minOccurs="0" name="disableEmail" type="xs:boolean" />
+      <xs:element minOccurs="0" name="lastModifiedByUserExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="lastModifiedDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address1" type="xs:string" />
+      <xs:element minOccurs="0" name="address2" type="xs:string" />
+      <xs:element minOccurs="0" name="city" type="xs:string" />
+      <xs:element minOccurs="0" name="country" type="xs:string" />
+      <xs:element minOccurs="0" name="postalCode" type="xs:string" />
+      <xs:element minOccurs="0" name="state" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TTStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cause" type="xs:string" />
+      <xs:element minOccurs="0" name="result" type="xs:string" />
+      <xs:element name="status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TTServiceException">
+    <xs:sequence>
+      <xs:element name="errorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="holdAppointment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="holdMin" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appointmentCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activityExternalId" type="xs:string" />
+      <xs:element name="appointmentDurationMin" type="xs:int" />
+      <xs:element minOccurs="0" name="campaignExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="campaignTimezone" type="xs:string" />
+      <xs:element minOccurs="0" name="clientExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="clientTimezone" type="xs:string" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element name="numberOfAttendees" type="xs:int" />
+      <xs:element minOccurs="0" name="programExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourcepoolExternalId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="secondaryResourcePool" nillable="true" type="tns:secondaryResourcePool" />
+      <xs:element name="setupDurationMin" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="characteristics" nillable="true" type="tns:characteristic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="characteristic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="key" type="xs:string" />
+      <xs:element minOccurs="0" name="value" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentsByCriteriaCreateDateRangeWithClient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentSearchCriteria" />
+      <xs:element minOccurs="0" name="startCreateDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endCreateDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appointmentSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activityExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="campaignExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="clientExternalId" type="xs:string" />
+      <xs:element name="includeCancelledAppointments" type="xs:boolean" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="locationUrl" type="xs:string" />
+      <xs:element minOccurs="0" name="programExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element name="suppressSubAppointmentDetail" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentsByCriteriaCreateDateRangeWithClientResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:appointmentWithClientListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appointmentWithClientListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="appointmentWithClientList" nillable="true" type="tns:appointmentWithClient" />
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentsByCriteriaAppointmentDateRangeWithClient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentSearchCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentsByCriteriaAppointmentDateRangeWithClientResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:appointmentWithClientListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateAppointmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bookAdhocAppointmentSimple">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentCriteria" />
+      <xs:element minOccurs="0" name="client" type="tns:client" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bookAdhocAppointmentSimpleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appendAppointmentAnswers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="confirmationNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="questionAnswerList" type="tns:appointmentAnswer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appointmentAnswer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="answer" type="xs:string" />
+      <xs:element minOccurs="0" name="question" type="xs:string" />
+      <xs:element minOccurs="0" name="questionExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appendAppointmentAnswersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentsByClientAndAppointmentDateRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clientExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appointmentListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="result" nillable="true" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:appointments" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFirstAvailableDateTimeSlotByDateRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFirstAvailableDateTimeSlotByDateRangeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:dateTimeSlot" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResources">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFirstAvailableDateTimeSlotByDateRangeWithSecondaryResourcesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:dateTimeSlot" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appointmentAnswersByAppointmentConfirmationNumber">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="confirmationNumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appointmentAnswersByAppointmentConfirmationNumberResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:appointmentAnswer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentsByCriteriaAppointmentDateRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentSearchCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentsByCriteriaAppointmentDateRangeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:appointmentListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentsByCriteriaCreateDateRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentSearchCriteria" />
+      <xs:element minOccurs="0" name="startCreateDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endCreateDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentsByCriteriaCreateDateRangeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:appointmentListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="checkOutAppointment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="confirmationNumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="checkOutAppointmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bookAppointmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentsByClientAppointmentDateRangeWithClient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clientExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentsByClientAppointmentDateRangeWithClientResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:appointmentWithClientListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAPIVersion">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAPIVersionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appointmentByConfirmationNumberStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appointment" type="ns1:appointment" />
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bookAppointmentAdHoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="clientExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bookAppointmentAdHocResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelAppointmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFirstAvaliableDateTimeSlotsByDateRangeDaily">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFirstAvailableDateTimeSlotsByDateRangeDailyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dateTimeSlot" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFirstAvaliableDateTimeSlotsByDateRangeDailyWithSecondaryResources">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFirstAvailableDateTimeSlotsByDateRangeDailyWithSecondaryResourcesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dateTimeSlot" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAvailableNDateTimeSlotsStartFromDate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="numberOfSlots" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAvailableNDateTimeSlotsStartFromDateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dateTimeSlot" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAvailableNDateTimeSlotsStartFromDateWithSecondaryResources">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="numberOfSlots" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAvailableNDateTimeSlotsStartFromDateWithSecondaryResourcesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dateTimeSlot" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rescheduleAppointment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="confirmationNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rescheduleAppointmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFirstAvailableDateTimeSlotByDateRangeWithGridFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFirstAvailableDateTimeSlotByDateRangeWithGridFilterResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:dateTimeSlot" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAvailableNDateTimeSlotsStartFromDateWithGridFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="numberOfSlots" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAvailableNDateTimeSlotsStartFromDateWithGridFilterResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dateTimeSlot" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFirstAvailableDateTimeSlotsByDateRangeDailyWithGridFilterResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dateSlot" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="checkInAppointment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="confirmationNumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="checkInAppointmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCompoundAppointmentByConfirmationNumber">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="confirmationNumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCompoundAppointmentByConfirmationNumberResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:compoundAppointmentListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelCompoundAppointment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="confirmationNumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelCompoundAppointmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCompoundAppointmentsByCriteriaAppointmentDateRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentSearchCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCompoundAppointmentsByCriteriaAppointmentDateRangeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:compoundAppointmentListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="compoundAppointmentListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="compoundAppointment" nillable="true" type="tns:compoundAppointment" />
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bookCompoundAppointment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:compoundAppointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="clientExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bookCompoundAppointmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="compoundAppointment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="compoundAppointmentConfirmationNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="appointmentType" type="tns:appointmentType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="appointments" nillable="true" type="ns1:appointment" />
+      <xs:element name="isCancelled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rescheduleCompoundAppointment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:compoundAppointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="confirmationNumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="compoundAppointmentCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="campaignExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="clientExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="programExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="compoundActivityGroup" type="tns:compoundActivityGroup" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="platformRules" nillable="true" type="tns:ruleMap" />
+      <xs:element name="resourceDepth" type="xs:int" />
+      <xs:element name="numberOfAttendees" type="xs:int" />
+      <xs:element name="clientTimezone" type="xs:string" />
+      <xs:element name="suppressResourceDetails" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="compoundActivityGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="activities" nillable="true" type="tns:compoundActivity" />
+      <xs:element minOccurs="0" name="containerActivityExternaId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="compoundActivity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activityExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="activityStartDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="activityEndDateTime" type="xs:dateTime" />
+      <xs:element name="durationInMinutes" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="resources" nillable="true" type="tns:compoundResource" />
+      <xs:element name="sequenceNumber" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="characteristics" nillable="true" type="tns:characteristic" />
+      <xs:element minOccurs="0" name="programExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="compoundResource">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="secondaryResourcePool" nillable="true" type="tns:secondaryResourcePool" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ruleMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ruleKey" type="tns:platformRule" />
+      <xs:element minOccurs="0" name="value" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rescheduleCompoundAppointmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCompoundAvailabilityNDateTimeSlotsStartFromDate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:compoundAppointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+      <xs:element name="numberOfSlots" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCompoundAvailabilityNDateTimeSlotsStartFromDateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:compoundAvailabilityResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="compoundAvailabilityResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="availableSlots" nillable="true" type="tns:compoundDateTimeSlot" />
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="compoundDateTimeSlot">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="activityGroup" type="tns:compoundActivityGroup" />
+      <xs:element minOccurs="0" name="appointmentSlotTime" type="xs:string" />
+      <xs:element minOccurs="0" name="status" type="tns:slotStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCompoundAppointmentsByCriteriaChanged">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentSearchCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCompoundAppointmentsByCriteriaChangedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:compoundAppointmentListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateCompoundAppointment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="compoundAppointment" type="tns:compoundAppointment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateCompoundAppointmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="bookCompoundAppointmentAdHoc" type="tns:bookCompoundAppointmentAdHoc" />
+  <xs:complexType name="bookCompoundAppointmentAdHoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:compoundAppointmentCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="clientExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="bookCompoundAppointmentAdHocResponse" type="tns:bookCompoundAppointmentAdHocResponse" />
+  <xs:complexType name="bookCompoundAppointmentAdHocResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="setAppointmentLifeCycleState" type="tns:setAppointmentLifeCycleState" />
+  <xs:element name="setAppointmentLifeCycleStateResponse" type="tns:setAppointmentLifeCycleStateResponse" />
+  <xs:element name="getAllAppointmentLifeCycleHistoryByConfirmation" type="tns:getAllAppointmentLifeCycleHistoryByConfirmation" />
+  <xs:element name="getAllAppointmentLifeCycleHistoryByConfirmationResponse" type="tns:getAllAppointmentLifeCycleHistoryByConfirmationResponse" />
+  <xs:element name="getAppointmentLifeCycleHistoryByCriteriaAuditDateRange" type="tns:getAppointmentLifeCycleHistoryByCriteriaAuditDateRange" />
+  <xs:element name="getAppointmentLifeCycleHistoryByCriteriaAuditDateRangeResponse" type="tns:getAppointmentLifeCycleHistoryByCriteriaAuditDateRangeResponse" />
+  <xs:complexType name="getAppointmentLifeCycleHistoryByCriteriaAuditDateRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criteria" type="tns:appointmentLifeCycleSearchCriteria" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appointmentLifeCycleSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activityExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="campaignExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="auditUserExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="programExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="currentAppointmentState" type="tns:appointmentLifeCycleState" />
+      <xs:element minOccurs="0" name="previousAppointmentState" type="tns:appointmentLifeCycleState" />
+      <xs:element minOccurs="0" name="confirmed" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAppointmentLifeCycleHistoryByCriteriaAuditDateRangeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:appointmentStateListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setAppointmentLifeCycleState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="stateChange" type="tns:appointmentLifeCycleStateChange" />
+      <xs:element minOccurs="0" name="confirmationNumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appointmentLifeCycleStateChange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appointmentState" type="tns:appointmentLifeCycleState" />
+      <xs:element minOccurs="0" name="confirmedFlag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="disposition" type="xs:string" />
+      <xs:element minOccurs="0" name="comment" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="questionResponses" nillable="true" type="tns:appointmentAnswer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllAppointmentLifeCycleHistoryByConfirmation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="confirmationNumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllAppointmentLifeCycleHistoryByConfirmationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:appointmentStateListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appointmentStateListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="appointmentStates" nillable="true" type="tns:appointmentLifeCycleStateInfo" />
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setAppointmentLifeCycleStateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appointmentLifeCycleStateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="changedByUserExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="comment" type="xs:string" />
+      <xs:element minOccurs="0" name="confirmationNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="currentAppointmentState" type="tns:appointmentLifeCycleState" />
+      <xs:element minOccurs="0" name="currentConfirmedFlag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="previousAppointmentState" type="tns:appointmentLifeCycleState" />
+      <xs:element minOccurs="0" name="previousConfirmedFlag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="disposition" type="tns:disposition" />
+      <xs:element minOccurs="0" name="stateChangedTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="disposition">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:simpleType name="slotStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UnAvailable" />
+      <xs:enumeration value="Available" />
+      <xs:enumeration value="InSufficient" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="emailFormatType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HTML" />
+      <xs:enumeration value="Plain Text" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="gender">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Not applicable" />
+      <xs:enumeration value="Female" />
+      <xs:enumeration value="Male" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Enabled" />
+      <xs:enumeration value="Deleted" />
+      <xs:enumeration value="Disabled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="appointmentType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Simple Appointment" />
+      <xs:enumeration value="Compound Appointment" />
+      <xs:enumeration value="Dynamic Compound Appointment" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="platformRule">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Resource Optimization" />
+      <xs:enumeration value="Preserve Actvity Order" />
+      <xs:enumeration value="None" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="appointmentLifeCycleState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Scheduled" />
+      <xs:enumeration value="Checked In" />
+      <xs:enumeration value="In Progress" />
+      <xs:enumeration value="Completed" />
+      <xs:enumeration value="Cancelled" />
+      <xs:enumeration value="No Show" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,1847 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.timecommerce.timetrade.com/ws" xmlns:ns1="http://services.timecommerce.timetrade.com/configuration" targetNamespace="http://services.timecommerce.timetrade.com/ws" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://bbuydev2api.timetradesystems.com:443/tc/api/6.4/ConfigurationServices?xsd=2" namespace="http://services.timecommerce.timetrade.com/configuration" />
+  <xs:element name="TTConfigurationServiceException" type="tns:TTConfigurationServiceException" />
+  <xs:element name="copyLocationDeep" type="tns:copyLocationDeep" />
+  <xs:element name="copyLocationDeepResponse" type="tns:copyLocationDeepResponse" />
+  <xs:element name="copyResourceDeep" type="tns:copyResourceDeep" />
+  <xs:element name="copyResourceDeepResponse" type="tns:copyResourceDeepResponse" />
+  <xs:element name="deleteActivityByExternalId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="locationExternalId" type="xs:string" />
+        <xs:element name="activityExternalId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteActivityByExternalIdResponse" type="tns:deleteActivityByExternalIdResponse" />
+  <xs:element name="deleteAllResourceMonthlySubSchedulePeriods" type="tns:deleteAllResourceMonthlySubSchedulePeriods" />
+  <xs:element name="deleteAllResourceMonthlySubSchedulePeriodsResponse" type="tns:deleteAllResourceMonthlySubSchedulePeriodsResponse" />
+  <xs:element name="deleteAllResourceOneTimeSubSchedulePeriods" type="tns:deleteAllResourceOneTimeSubSchedulePeriods" />
+  <xs:element name="deleteAllResourceOneTimeSubSchedulePeriodsResponse" type="tns:deleteAllResourceOneTimeSubSchedulePeriodsResponse" />
+  <xs:element name="deleteAllResourceWeeklySubSchedulePeriods" type="tns:deleteAllResourceWeeklySubSchedulePeriods" />
+  <xs:element name="deleteAllResourceWeeklySubSchedulePeriodsResponse" type="tns:deleteAllResourceWeeklySubSchedulePeriodsResponse" />
+  <xs:element name="deleteAllResourceYearlySubSchedulePeriods" type="tns:deleteAllResourceYearlySubSchedulePeriods" />
+  <xs:element name="deleteAllResourceYearlySubSchedulePeriodsResponse" type="tns:deleteAllResourceYearlySubSchedulePeriodsResponse" />
+  <xs:element name="deleteCampaignByExternalId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="locationExternalId" type="xs:string" />
+        <xs:element name="campaignExternalId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteCampaignByExternalIdResponse" type="tns:deleteCampaignResponse" />
+  <xs:element name="deleteLocationByExternalId" type="tns:deleteLocationByExternalId" />
+  <xs:element name="deleteLocationByExternalIdResponse" type="tns:deleteLocationByExternalIdResponse" />
+  <xs:element name="deleteLocationScheduleByExternalId" type="tns:deleteLocationScheduleByExternalId" />
+  <xs:element name="deleteLocationScheduleByExternalIdResponse" type="tns:deleteLocationScheduleByExternalIdResponse" />
+  <xs:element name="deleteProgramByExternalId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="locationExternalId" type="xs:string" />
+        <xs:element name="programExternalId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteProgramByExternalIdResponse" type="tns:deleteProgramByExternalIdResponse" />
+  <xs:element name="deleteResourceByExternalId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="locationExternalId" type="xs:string" />
+        <xs:element name="resourceExternalId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteResourceByExternalIdResponse" type="tns:deleteResourceByExternalIdResponse" />
+  <xs:element name="deleteResourceMonthlySubSchedulePeriod" type="tns:deleteResourceMonthlySubSchedulePeriod" />
+  <xs:element name="deleteResourceMonthlySubSchedulePeriodResponse" type="tns:deleteResourceMonthlySubSchedulePeriodResponse" />
+  <xs:element name="deleteResourceOneTimeSubSchedulePeriod" type="tns:deleteResourceOneTimeSubSchedulePeriod" />
+  <xs:element name="deleteResourceOneTimeSubSchedulePeriodResponse" type="tns:deleteResourceOneTimeSubSchedulePeriodResponse" />
+  <xs:element name="deleteResourceScheduleByExternalId" type="tns:deleteResourceScheduleByExternalId" />
+  <xs:element name="deleteResourceScheduleByExternalIdResponse" type="tns:deleteResourceScheduleByExternalIdResponse" />
+  <xs:element name="deleteResourceWeeklySubSchedulePeriod" type="tns:deleteResourceWeeklySubSchedulePeriod" />
+  <xs:element name="deleteResourceWeeklySubSchedulePeriodResponse" type="tns:deleteResourceWeeklySubSchedulePeriodResponse" />
+  <xs:element name="deleteResourceYearlySubSchedulePeriod" type="tns:deleteResourceYearlySubSchedulePeriod" />
+  <xs:element name="deleteResourceYearlySubSchedulePeriodResponse" type="tns:deleteResourceYearlySubSchedulePeriodResponse" />
+  <xs:element name="getActivityByExternalId" type="tns:getActivityByExternalId" />
+  <xs:element name="getActivityByExternalIdResponse" type="tns:getActivityByExternalIdResponse" />
+  <xs:element name="getActivities" type="tns:getActivities" />
+  <xs:element name="getActivitiesResponse" type="tns:getActivitiesResponse" />
+  <xs:element name="getAllLocationSchedules" type="tns:getAllLocationSchedules" />
+  <xs:element name="getAllLocationSchedulesResponse" type="tns:getAllLocationSchedulesResponse" />
+  <xs:element name="getPrograms" type="tns:getPrograms" />
+  <xs:element name="getProgramsResponse" type="tns:getProgramsResponse" />
+  <xs:element name="getCampaigns" type="tns:getCampaigns" />
+  <xs:element name="getCampaignsResponse" type="tns:getCampaignsResponse" />
+  <xs:element name="getAllResourceSchedules" type="tns:getAllResourceSchedules" />
+  <xs:element name="getAllResourceSchedulesResponse" type="tns:getAllResourceSchedulesResponse" />
+  <xs:element name="getCampaignByExternalId" type="tns:getCampaignByExternalId" />
+  <xs:element name="getCampaignByExternalIdResponse" type="tns:getCampaignByExternalIdResponse" />
+  <xs:element name="getLocationSchedulesByCriteria" type="tns:getLocationSchedulesByCriteria" />
+  <xs:element name="getLocationSchedulesByCriteriaResponse" type="tns:getLocationSchedulesByCriteriaResponse" />
+  <xs:element name="getLocationsByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="locationSearchCriteria" type="tns:locationSearchCriteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLocationsByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="return" type="tns:locationListResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLocationsByGeoCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="locationSearchGeoCriteria" type="tns:locationSearchGeoCriteria" />
+        <xs:element name="LocationSearchCriteria" type="tns:locationSearchCriteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLocationsByGeoCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="return" type="tns:locationListResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProgramByExternalId" type="tns:getProgramByExternalId" />
+  <xs:element name="getProgramByExternalIdResponse" type="tns:getProgramByExternalIdResponse" />
+  <xs:element name="getResourceByExternalId" type="tns:getResourceByExternalId" />
+  <xs:element name="getResourceByExternalIdResponse" type="tns:getResourceByExternalIdResponse" />
+  <xs:element name="getResourceScheduleByExternalId" type="tns:getResourceScheduleByExternalId" />
+  <xs:element name="getResourceScheduleByExternalIdResponse" type="tns:getResourceScheduleByExternalIdResponse" />
+  <xs:element name="getResourceSchedulesByCriteria" type="tns:getResourceSchedulesByCriteria" />
+  <xs:element name="getResourceSchedulesByCriteriaResponse" type="tns:getResourceSchedulesByCriteriaResponse" />
+  <xs:element name="getResourcesByCriteria" type="tns:getResourcesByCriteria" />
+  <xs:element name="getResourcesByCriteriaResponse" type="tns:getResourcesByCriteriaResponse" />
+  <xs:element name="insertActivity" type="tns:insertActivity" />
+  <xs:element name="insertActivityResponse" type="tns:insertActivityResponse" />
+  <xs:element name="insertCampaign" type="tns:insertCampaign" />
+  <xs:element name="insertCampaignResponse" type="tns:insertCampaignResponse" />
+  <xs:element name="insertLocation" type="tns:insertLocation" />
+  <xs:element name="insertLocationResponse" type="tns:insertLocationResponse" />
+  <xs:element name="insertLocationSchedule" type="tns:insertLocationSchedule" />
+  <xs:element name="insertLocationScheduleResponse" type="tns:insertLocationScheduleResponse" />
+  <xs:element name="insertMultipleActivities" type="tns:insertMultipleActivities" />
+  <xs:element name="insertMultipleActivitiesResponse" type="tns:insertMultipleActivitiesResponse" />
+  <xs:element name="insertMultipleCampaigns" type="tns:insertMultipleCampaigns" />
+  <xs:element name="insertMultipleCampaignsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="return" type="tns:campaignListResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertMultipleLocations" type="tns:insertMultipleLocations" />
+  <xs:element name="insertMultipleLocationsResponse" type="tns:insertMultipleLocationsResponse" />
+  <xs:element name="insertMultiplePrograms" type="tns:insertMultiplePrograms" />
+  <xs:element name="insertMultipleProgramsResponse" type="tns:insertMultipleProgramsResponse" />
+  <xs:element name="insertMultipleResources" type="tns:insertMultipleResources" />
+  <xs:element name="insertMultipleResourcesResponse" type="tns:insertMultipleResourcesResponse" />
+  <xs:element name="insertProgram" type="tns:insertProgram" />
+  <xs:element name="insertProgramResponse" type="tns:insertProgramResponse" />
+  <xs:element name="insertResource" type="tns:insertResource" />
+  <xs:element name="insertResourceResponse" type="tns:insertResourceResponse" />
+  <xs:element name="insertResourceSchedule" type="tns:insertResourceSchedule" />
+  <xs:element name="insertResourceScheduleResponse" type="tns:insertResourceScheduleResponse" />
+  <xs:element name="updateActivityExternalId" type="tns:updateActivityExternalId" />
+  <xs:element name="updateActivityExternalIdResponse" type="tns:updateActivityExternalIdResponse" />
+  <xs:element name="updateCampaignExternalId" type="tns:updateCampaignExternalId" />
+  <xs:element name="updateCampaignExternalIdResponse" type="tns:updateCampaignExternalIdResponse" />
+  <xs:element name="updateInsertActivity" type="tns:updateInsertActivity" />
+  <xs:element name="updateInsertActivityResponse" type="tns:updateInsertActivityResponse" />
+  <xs:element name="updateInsertCampaign" type="tns:updateInsertCampaign" />
+  <xs:element name="updateInsertCampaignResponse" type="tns:updateInsertCampaignResponse" />
+  <xs:element name="updateInsertLocation" type="tns:updateInsertLocation" />
+  <xs:element name="updateInsertLocationResponse" type="tns:updateInsertLocationResponse" />
+  <xs:element name="updateInsertLocationSchedule" type="tns:updateInsertLocationSchedule" />
+  <xs:element name="updateInsertLocationScheduleResponse" type="tns:updateInsertLocationScheduleResponse" />
+  <xs:element name="updateInsertMultipleResources" type="tns:updateInsertMultipleResources" />
+  <xs:element name="updateInsertMultipleResourcesResponse" type="tns:updateInsertMultipleResourcesResponse" />
+  <xs:element name="updateInsertProgram" type="tns:updateInsertProgram" />
+  <xs:element name="updateInsertProgramResponse" type="tns:updateInsertProgramResponse" />
+  <xs:element name="updateInsertResource" type="tns:updateInsertResource" />
+  <xs:element name="updateInsertResourceMonthlySubSchedulePeriod" type="tns:updateInsertResourceMonthlySubSchedulePeriod" />
+  <xs:element name="updateInsertResourceMonthlySubSchedulePeriodResponse" type="tns:updateInsertResourceMonthlySubSchedulePeriodResponse" />
+  <xs:element name="updateInsertResourceOneTimeSubSchedulePeriod" type="tns:updateInsertResourceOneTimeSubSchedulePeriod" />
+  <xs:element name="updateInsertResourceOneTimeSubSchedulePeriodResponse" type="tns:updateInsertResourceOneTimeSubSchedulePeriodResponse" />
+  <xs:element name="updateInsertResourceResponse" type="tns:updateInsertResourceResponse" />
+  <xs:element name="updateInsertResourceSchedule" type="tns:updateInsertResourceSchedule" />
+  <xs:element name="updateInsertResourceScheduleResponse" type="tns:updateInsertResourceScheduleResponse" />
+  <xs:element name="updateInsertResourceWeeklySubSchedulePeriod" type="tns:updateInsertResourceWeeklySubSchedulePeriod" />
+  <xs:element name="updateInsertResourceWeeklySubSchedulePeriodResponse" type="tns:updateInsertResourceWeeklySubSchedulePeriodResponse" />
+  <xs:element name="updateInsertResourceYearlySubSchedulePeriod" type="tns:updateInsertResourceYearlySubSchedulePeriod" />
+  <xs:element name="updateInsertResourceYearlySubSchedulePeriodResponse" type="tns:updateInsertResourceYearlySubSchedulePeriodResponse" />
+  <xs:element name="updateLocationExternalId" type="tns:updateLocationExternalId" />
+  <xs:element name="updateLocationExternalIdResponse" type="tns:updateLocationExternalIdResponse" />
+  <xs:element name="updateProgramExternalId" type="tns:updateProgramExternalId" />
+  <xs:element name="updateProgramExternalIdResponse" type="tns:updateProgramExternalIdResponse" />
+  <xs:element name="updateResourceExternalId" type="tns:updateResourceExternalId" />
+  <xs:element name="updateResourceExternalIdResponse" type="tns:updateResourceExternalIdResponse" />
+  <xs:element name="updateResourceScheduleExternalId" type="tns:updateResourceScheduleExternalId" />
+  <xs:element name="updateResourceScheduleExternalIdResponse" type="tns:updateResourceScheduleExternalIdResponse" />
+  <xs:element name="getSecondaryResourcePoolsByCriteria" type="tns:getSecondaryResourcePoolsByCriteria" />
+  <xs:element name="getSecondaryResourcePoolsByCriteriaResponse" type="tns:getSecondaryResourcePoolsByCriteriaResponse" />
+  <xs:element name="updateInsertLocationGroup" type="tns:updateInsertLocationGroup" />
+  <xs:element name="updateInsertLocationGroupResponse" type="tns:updateInsertLocationGroupResponse" />
+  <xs:element name="addLocationToLocationGroup" type="tns:addLocationToLocationGroup" />
+  <xs:element name="addLocationToLocationGroupResponse" type="tns:addLocationToLocationGroupResponse" />
+  <xs:element name="deleteLocationFromLocationGroup" type="tns:deleteLocationFromLocationGroup" />
+  <xs:element name="deleteLocationFromLocationGroupResponse" type="tns:deleteLocationFromLocationGroupResponse" />
+  <xs:element name="deleteLocationGroup" type="tns:deleteLocationGroup" />
+  <xs:element name="deleteLocationGroupResponse" type="tns:deleteLocationGroupResponse" />
+  <xs:element name="getAllLocationGroups" type="tns:getAllLocationGroups" />
+  <xs:element name="getAllLocationGroupsResponse" type="tns:getAllLocationGroupsResponse" />
+  <xs:element name="getLocationGroup" type="tns:getLocationGroup" />
+  <xs:element name="getLocationGroupResponse" type="tns:getLocationGroupResponse" />
+  <xs:element name="getUserLocationGroupLoginRights" type="tns:getUserLocationGroupLoginRights" />
+  <xs:element name="getUserLocationGroupLoginRightsResponse" type="tns:getUserLocationGroupLoginRightsResponse" />
+  <xs:element name="getUserLocationLoginRights" type="tns:getUserLocationLoginRights" />
+  <xs:element name="getUserLocationLoginRightsResponse" type="tns:getUserLocationLoginRightsResponse" />
+  <xs:element name="setUserLocationGroupLoginRights" type="tns:setUserLocationGroupLoginRights" />
+  <xs:element name="setUserLocationGroupLoginRightsResponse" type="tns:setUserLocationGroupLoginRightsResponse" />
+  <xs:element name="setUserLocationLoginRights" type="tns:setUserLocationLoginRights" />
+  <xs:element name="setUserLocationLoginRightsResponse" type="tns:setUserLocationLoginRightsResponse" />
+  <xs:element name="deleteUserLocationGroupLoginRights" type="tns:deleteUserLocationGroupLoginRights" />
+  <xs:element name="deleteUserLocationGroupLoginRightsResponse" type="tns:deleteUserLocationGroupLoginRightsResponse" />
+  <xs:element name="deleteUserLocationLoginRights" type="tns:deleteUserLocationLoginRights" />
+  <xs:element name="deleteUserLocationLoginRightsResponse" type="tns:deleteUserLocationLoginRightsResponse" />
+  <xs:element name="updateInsertActivityToResourceAssignment" type="tns:updateInsertActivityToResourceAssignment" />
+  <xs:element name="updateInsertActivityToResourceAssignmentResponse" type="tns:updateInsertActivityToResourceAssignmentResponse" />
+  <xs:element name="deleteActivityToResourceAssignment" type="tns:deleteActivityToResourceAssignment" />
+  <xs:element name="deleteActivityToResourceAssignmentResponse" type="tns:deleteActivityToResourceAssignmentResponse" />
+  <xs:element name="getActivityToResourceAssignment" type="tns:getActivityToResourceAssignment" />
+  <xs:element name="getActivityToResourceAssignmentResponse" type="tns:getActivityToResourceAssignmentResponse" />
+  <xs:element name="getAllActivityToResourceAssignment" type="tns:getAllActivityToResourceAssignment" />
+  <xs:element name="getAllActivityToResourceAssignmentResponse" type="tns:getAllActivityToResourceAssignmentResponse" />
+  <xs:element name="deleteAllLocationMonthlySubSchedulePeriods" type="tns:deleteAllLocationMonthlySubSchedulePeriods" />
+  <xs:element name="deleteAllLocationMonthlySubSchedulePeriodsResponse" type="tns:deleteAllLocationMonthlySubSchedulePeriodsResponse" />
+  <xs:element name="deleteAllLocationOneTimeSubSchedulePeriods" type="tns:deleteAllLocationOneTimeSubSchedulePeriods" />
+  <xs:element name="deleteAllLocationOneTimeSubSchedulePeriodsResponse" type="tns:deleteAllLocationOneTimeSubSchedulePeriodsResponse" />
+  <xs:element name="deleteAllLocationWeeklySubSchedulePeriods" type="tns:deleteAllLocationWeeklySubSchedulePeriods" />
+  <xs:element name="deleteAllLocationWeeklySubSchedulePeriodsResponse" type="tns:deleteAllLocationWeeklySubSchedulePeriodsResponse" />
+  <xs:element name="deleteAllLocationYearlySubSchedulePeriods" type="tns:deleteAllLocationYearlySubSchedulePeriods" />
+  <xs:element name="deleteAllLocationYearlySubSchedulePeriodsResponse" type="tns:deleteAllLocationYearlySubSchedulePeriodsResponse" />
+  <xs:element name="deleteLocationMonthlySubSchedulePeriod" type="tns:deleteLocationMonthlySubSchedulePeriod" />
+  <xs:element name="deleteLocationMonthlySubSchedulePeriodResponse" type="tns:deleteLocationMonthlySubSchedulePeriodResponse" />
+  <xs:element name="deleteLocationOneTimeSubSchedulePeriod" type="tns:deleteLocationOneTimeSubSchedulePeriod" />
+  <xs:element name="deleteLocationOneTimeSubSchedulePeriodResponse" type="tns:deleteLocationOneTimeSubSchedulePeriodResponse" />
+  <xs:element name="deleteLocationWeeklySubSchedulePeriod" type="tns:deleteLocationWeeklySubSchedulePeriod" />
+  <xs:element name="deleteLocationWeeklySubSchedulePeriodResponse" type="tns:deleteLocationWeeklySubSchedulePeriodResponse" />
+  <xs:element name="deleteLocationYearlySubSchedulePeriod" type="tns:deleteLocationYearlySubSchedulePeriod" />
+  <xs:element name="deleteLocationYearlySubSchedulePeriodResponse" type="tns:deleteLocationYearlySubSchedulePeriodResponse" />
+  <xs:element name="updateInsertLocationMonthlySubSchedulePeriod" type="tns:updateInsertLocationMonthlySubSchedulePeriod" />
+  <xs:element name="updateInsertLocationMonthlySubSchedulePeriodResponse" type="tns:updateInsertLocationMonthlySubSchedulePeriodResponse" />
+  <xs:element name="updateInsertLocationOneTimeSubSchedulePeriod" type="tns:updateInsertLocationOneTimeSubSchedulePeriod" />
+  <xs:element name="updateInsertLocationOneTimeSubSchedulePeriodResponse" type="tns:updateInsertLocationOneTimeSubSchedulePeriodResponse" />
+  <xs:element name="updateInsertLocationWeeklySubSchedulePeriod" type="tns:updateInsertLocationWeeklySubSchedulePeriod" />
+  <xs:element name="updateInsertLocationWeeklySubSchedulePeriodResponse" type="tns:updateInsertLocationWeeklySubSchedulePeriodResponse" />
+  <xs:element name="updateInsertLocationYearlySubSchedulePeriod" type="tns:updateInsertLocationYearlySubSchedulePeriod" />
+  <xs:element name="updateInsertLocationYearlySubSchedulePeriodResponse" type="tns:updateInsertLocationYearlySubSchedulePeriodResponse" />
+  <xs:element name="updateInsertUserToResourceVisibility" type="tns:updateInsertUserToResourceVisibility" />
+  <xs:element name="updateInsertUserToResourceVisibilityResponse" type="tns:updateInsertUserToResourceVisibilityResponse" />
+  <xs:element name="deleteUserToResourceVisibility" type="tns:deleteUserToResourceVisibility" />
+  <xs:element name="deleteUserToResourceVisibilityResponse" type="tns:deleteUserToResourceVisibilityResponse" />
+  <xs:element name="getAllUserToResourceVisibility" type="tns:getAllUserToResourceVisibility" />
+  <xs:element name="getAllUserToResourceVisibilityResponse" type="tns:getAllUserToResourceVisibilityResponse" />
+  <xs:element name="getUserToResourceVisibility" type="tns:getUserToResourceVisibility" />
+  <xs:element name="getUserToResourceVisibilityResponse" type="tns:getUserToResourceVisibilityResponse" />
+  <xs:element name="getResourceCharacteristics" type="tns:getResourceCharacteristics" />
+  <xs:element name="getResourceCharacteristicsResponse" type="tns:getResourceCharacteristicsResponse" />
+  <xs:element name="updateInsertResourceCharacteristics" type="tns:updateInsertResourceCharacteristics" />
+  <xs:element name="updateInsertResourceCharacteristicsResponse" type="tns:updateInsertResourceCharacteristicsResponse" />
+  <xs:element name="deleteAllResourceCharacteristics" type="tns:deleteAllResourceCharacteristics" />
+  <xs:element name="deleteAllResourceCharacteristicsResponse" type="tns:deleteAllResourceCharacteristicsResponse" />
+  <xs:element name="deleteResourceOneTimeSubSchedulePeriodByDateRange" type="tns:deleteResourceOneTimeSubSchedulePeriodByDateRange" />
+  <xs:element name="deleteResourceOneTimeSubSchedulePeriodByDateRangeResponse" type="tns:deleteResourceOneTimeSubSchedulePeriodByDateRangeResponse" />
+  <xs:element name="deleteLocationOneTimeSubSchedulePeriodByDateRange" type="tns:deleteLocationOneTimeSubSchedulePeriodByDateRange" />
+  <xs:element name="deleteLocationOneTimeSubSchedulePeriodByDateRangeResponse" type="tns:deleteLocationOneTimeSubSchedulePeriodByDateRangeResponse" />
+  <xs:complexType name="deleteLocationOneTimeSubSchedulePeriodByDateRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="schedulePeriodStartDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="schedulePeriodEndDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationOneTimeSubSchedulePeriodByDateRangeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteResourceOneTimeSubSchedulePeriodByDateRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="schedulePeriodStartDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="schedulePeriodEndDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteResourceOneTimeSubSchedulePeriodByDateRangeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllResourceCharacteristics">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllResourceCharacteristicsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertResourceCharacteristics">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="characteristics" type="tns:resourceCharacteristics" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resourceCharacteristics">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="characteristics" nillable="true" type="tns:characteristic" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="characteristic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="key" type="xs:string" />
+      <xs:element minOccurs="0" name="value" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertResourceCharacteristicsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getResourceCharacteristics">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getResourceCharacteristicsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resourceCharacteristicsResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resourceCharacteristicsResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="characteristics" type="tns:resourceCharacteristics" />
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllUserToResourceVisibility">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="userExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllUserToResourceVisibilityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:userToResourceListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertUserToResourceVisibility">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userToResourceVisibility" type="tns:userToResourceVisibility" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertUserToResourceVisibilityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserToResourceVisibility">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="userExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserToResourceVisibilityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:userToResourceListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteUserToResourceVisibility">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="userExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteUserToResourceVisibilityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userToResourceVisibility">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="userExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userToResourceListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="userToResourcelist" nillable="true" type="tns:userToResourceVisibility" />
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertLocationMonthlySubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="monthlySubSchedulePeriod" type="tns:monthlySubSchedulePeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertLocationMonthlySubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertLocationWeeklySubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="weeklySubSchedulePeriod" type="tns:weeklySubSchedulePeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertLocationWeeklySubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllLocationYearlySubSchedulePeriods">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllLocationYearlySubSchedulePeriodsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertLocationYearlySubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="yearlySubSchedulePeriod" type="tns:yearlySubSchedulePeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertLocationYearlySubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationWeeklySubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element name="schedulePeriodId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationWeeklySubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllLocationWeeklySubSchedulePeriods">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllLocationWeeklySubSchedulePeriodsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationOneTimeSubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element name="schedulePeriodId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationOneTimeSubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationMonthlySubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element name="schedulePeriodId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationMonthlySubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationYearlySubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element name="schedulePeriodId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationYearlySubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllLocationMonthlySubSchedulePeriods">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllLocationMonthlySubSchedulePeriodsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertLocationOneTimeSubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="oneTimeSubSchedulePeriod" type="tns:oneTimeSubSchedulePeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertLocationOneTimeSubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllLocationOneTimeSubSchedulePeriods">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="schedulePeriodStartDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="schedulePeriodEndDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllLocationOneTimeSubSchedulePeriodsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllActivityToResourceAssignment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllActivityToResourceAssignmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:activityToResourceListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getActivityToResourceAssignment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="activityExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getActivityToResourceAssignmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:activityToResourceListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteActivityToResourceAssignment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="activityExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteActivityToResourceAssignmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertActivityToResourceAssignment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activityToResourceAssignment" type="tns:activityToResourceAssignment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertActivityToResourceAssignmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="activityToResourceAssignment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activityExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element name="overbookingCapacity" type="xs:int" />
+      <xs:element name="overrideOverbooking" type="xs:boolean" />
+      <xs:element name="overrideDefaultRecoveryTime" type="xs:boolean" />
+      <xs:element name="recoveryTime" type="xs:int" />
+      <xs:element name="bookingCapacity" type="xs:int" />
+      <xs:element name="appointmentConsumesCapacity" type="xs:boolean" />
+      <xs:element name="resourceAllocationRank" type="xs:int" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="activityToResourceListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="activityToResourceAssignments" nillable="true" type="tns:activityToResourceAssignment" />
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="activityToResourceResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activityToResourceAssignment" type="tns:activityToResourceAssignment" />
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertProgram">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="program" type="tns:program" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="program">
+    <xs:sequence>
+      <xs:element name="deleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="deletedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element minOccurs="0" name="emailAddressData" type="tns:emailAddressData" />
+      <xs:element minOccurs="0" name="isEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="programExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="programName" type="xs:string" />
+      <xs:element minOccurs="0" name="programRules" type="tns:programRules" />
+      <xs:element minOccurs="0" name="propertyGroupExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleStartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="scheduleType" type="tns:scheduleType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="suppressVisibilityPerApp" nillable="true" type="tns:suppressVisibilityPerApp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="emailAddressData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="emailAddress" type="xs:string" />
+      <xs:element name="emailEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="emailFormatType" type="tns:emailFormatType" />
+      <xs:element minOccurs="0" name="emailName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="programRules">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="applyRecoveryTime" type="xs:boolean" />
+      <xs:element minOccurs="0" name="applyScheduleStartTime" type="xs:boolean" />
+      <xs:element minOccurs="0" name="availableForMultiLocationAppointments" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isActivityGroupingEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="resourceGroupRule" type="tns:resourceGroupRules" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertProgramResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TTStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cause" type="xs:string" />
+      <xs:element minOccurs="0" name="result" type="xs:string" />
+      <xs:element name="status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TTConfigurationServiceException">
+    <xs:sequence>
+      <xs:element name="code" type="xs:int" />
+      <xs:element name="errorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertMultipleResources">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="resources" type="ns1:resource" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="phoneData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fax" type="xs:string" />
+      <xs:element minOccurs="0" name="faxExt" type="xs:string" />
+      <xs:element minOccurs="0" name="homePhone" type="xs:string" />
+      <xs:element minOccurs="0" name="homePhoneExt" type="xs:string" />
+      <xs:element minOccurs="0" name="mobile" type="xs:string" />
+      <xs:element minOccurs="0" name="mobileExt" type="xs:string" />
+      <xs:element minOccurs="0" name="workPhone" type="xs:string" />
+      <xs:element minOccurs="0" name="workPhoneExt" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resourceRules">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="allowConcurrentActivities" type="xs:boolean" />
+      <xs:element minOccurs="0" name="allowScheduleExpansion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="applyAppointmentsAcrossLocations" type="xs:boolean" />
+      <xs:element minOccurs="0" name="applyConcurrentAppointments" type="xs:boolean" />
+      <xs:element minOccurs="0" name="applyRecoveryOnTravel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="applyTimezone" type="xs:boolean" />
+      <xs:element minOccurs="0" name="applyTravelTime" type="xs:boolean" />
+      <xs:element minOccurs="0" name="overlapSetupTravelTime" type="xs:boolean" />
+      <xs:element name="scheduleExpansionLength" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertMultipleResourcesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:resourceListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resourceListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="result" nillable="true" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:resources" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProgramByExternalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="programExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProgramByExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:program" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationByExternalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="externalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationByExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertCampaign">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="campaign" type="tns:campaign" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="campaign">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="campaignExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="campaignName" type="xs:string" />
+      <xs:element minOccurs="0" name="campaignRules" type="tns:campaignRules" />
+      <xs:element minOccurs="0" name="campaignUrl" type="xs:string" />
+      <xs:element minOccurs="0" name="defaultCountry" type="xs:string" />
+      <xs:element minOccurs="0" name="defaultState" type="xs:string" />
+      <xs:element minOccurs="0" name="deletedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="emailAddressData" type="tns:emailAddressData" />
+      <xs:element minOccurs="0" name="isDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="propertyGroupExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleEndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="scheduleStartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="timezone" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="campaignRules">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="applyCampaignSchedule" type="xs:boolean" />
+      <xs:element minOccurs="0" name="applyTimezone" type="xs:boolean" />
+      <xs:element minOccurs="0" name="filterAppointmentsByCampaign" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertCampaignResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationScheduleByExternalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationScheduleByExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="copyLocationDeep">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sourceLocationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="targetLocationExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="copyLocationDeepResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getResourceScheduleByExternalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getResourceScheduleByExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="ns1:schedule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="monthlySubSchedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="monthlySubSchedulePeriods" nillable="true" type="tns:monthlySubSchedulePeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="monthlySubSchedulePeriod">
+    <xs:sequence>
+      <xs:element name="schedulePeriodId" type="xs:int" />
+      <xs:element name="dayOfMonth" type="xs:int" />
+      <xs:element minOccurs="0" name="endTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="scheduleAvailabilityType" type="tns:scheduleAvailabilityType" />
+      <xs:element minOccurs="0" name="startTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="oneTimeSubSchedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="oneTimeSubSchedulePeriods" nillable="true" type="tns:oneTimeSubSchedulePeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="oneTimeSubSchedulePeriod">
+    <xs:sequence>
+      <xs:element name="schedulePeriodId" type="xs:int" />
+      <xs:element minOccurs="0" name="endTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="scheduleAvailabilityType" type="tns:scheduleAvailabilityType" />
+      <xs:element minOccurs="0" name="startTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="weeklySubSchedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="weeklySubSchedulePeriods" nillable="true" type="tns:weeklySubSchedulePeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="weeklySubSchedulePeriod">
+    <xs:sequence>
+      <xs:element name="schedulePeriodId" type="xs:int" />
+      <xs:element minOccurs="0" name="endTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="scheduleAvailabilityType" type="tns:scheduleAvailabilityType" />
+      <xs:element minOccurs="0" name="startTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="weekDay" type="tns:weekDay" />
+      <xs:element minOccurs="0" name="localStartTime" type="xs:string" />
+      <xs:element minOccurs="0" name="localEndTime" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="yearlySubSchedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="yearlySubSchedulePeriods" nillable="true" type="tns:yearlySubSchedulePeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="yearlySubSchedulePeriod">
+    <xs:sequence>
+      <xs:element name="schedulePeriodId" type="xs:int" />
+      <xs:element name="dayOfMonth" type="xs:int" />
+      <xs:element minOccurs="0" name="endTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="month" type="tns:month" />
+      <xs:element minOccurs="0" name="scheduleAvailabilityType" type="tns:scheduleAvailabilityType" />
+      <xs:element minOccurs="0" name="startTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllLocationSchedules">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllLocationSchedulesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:LocationScheduleListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LocationScheduleListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="result" nillable="true" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="locationSchedules" nillable="true" type="ns1:schedule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPrograms">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="campaignExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProgramsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:programListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCampaigns">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCampaignsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:campaignListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="programListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="result" nillable="true" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="programs" nillable="true" type="tns:program" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteResourceYearlySubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element name="schedulePeriodId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteResourceYearlySubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getActivityByExternalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="activityExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getActivityByExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="ns1:activity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="activityRules">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="allocateSamePrimaryResource" type="xs:boolean" />
+      <xs:element minOccurs="0" name="allocateSameSecondaryResource" type="xs:boolean" />
+      <xs:element minOccurs="0" name="allowConcurrentAppointments" type="xs:boolean" />
+      <xs:element minOccurs="0" name="applyDateRange" type="xs:boolean" />
+      <xs:element minOccurs="0" name="canSchedulePartialSeries" type="xs:boolean" />
+      <xs:element minOccurs="0" name="canScheduleSingleEvents" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isEventSeries" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isOverbookingEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isPaymentEnabled" type="xs:boolean" />
+      <xs:element name="maxAttendeesPerAppointment" type="xs:int" />
+      <xs:element minOccurs="0" name="overBookingRule" type="tns:overBookingRule" />
+      <xs:element minOccurs="0" name="repeatQuestionForAttendees" type="xs:boolean" />
+      <xs:element minOccurs="0" name="resourceAllocationRule" type="tns:resourceAllocationRule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllResourceSchedules">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllResourceSchedulesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:scheduleListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="scheduleListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="result" nillable="true" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="resourceSchedules" nillable="true" type="ns1:schedule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateLocationExternalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="newLocationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="oldLocationExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateLocationExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertResourceMonthlySubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="monthlySubSchedulePeriod" type="tns:monthlySubSchedulePeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertResourceMonthlySubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCampaignByExternalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="campaignExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCampaignByExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:campaign" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllResourceMonthlySubSchedulePeriods">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllResourceMonthlySubSchedulePeriodsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllResourceWeeklySubSchedulePeriods">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllResourceWeeklySubSchedulePeriodsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateResourceScheduleExternalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="newSceduleExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="oldScheduleExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateResourceScheduleExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertResourceYearlySubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="yearlySubSchedulePeriod" type="tns:yearlySubSchedulePeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertResourceYearlySubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteResourceMonthlySubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element name="schedulePeriodId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteResourceMonthlySubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertResourceOneTimeSubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="oneTimeSubSchedulePeriod" type="tns:oneTimeSubSchedulePeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertResourceOneTimeSubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertLocationSchedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="schedule" type="ns1:schedule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertLocationScheduleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateProgramExternalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="newProgramExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="oldProgramExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateProgramExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLocationSchedulesByCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="scheduleSearchCriteria" type="tns:scheduleSearchCriteria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="scheduleSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleName" type="xs:string" />
+      <xs:element minOccurs="0" name="oneTimeScheduleEndDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="oneTimeScheduleStartDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLocationSchedulesByCriteriaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:LocationScheduleListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getActivities">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="campaignExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="programExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getActivitiesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:activityListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="activityListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="result" nillable="true" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="activities" nillable="true" type="ns1:activity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteResourceScheduleByExternalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteResourceScheduleByExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllResourceOneTimeSubSchedulePeriods">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllResourceOneTimeSubSchedulePeriodsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteResourceOneTimeSubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element name="schedulePeriodId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteResourceOneTimeSubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertResourceSchedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="schedule" type="ns1:schedule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertResourceScheduleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="location" type="ns1:location" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address1" type="xs:string" />
+      <xs:element minOccurs="0" name="address2" type="xs:string" />
+      <xs:element minOccurs="0" name="city" type="xs:string" />
+      <xs:element minOccurs="0" name="country" type="xs:string" />
+      <xs:element minOccurs="0" name="postalCode" type="xs:string" />
+      <xs:element minOccurs="0" name="state" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertLocationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllResourceYearlySubSchedulePeriods">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAllResourceYearlySubSchedulePeriodsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteProgramByExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="location" type="ns1:location" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertLocationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertResourceWeeklySubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="weeklySubSchedulePeriod" type="tns:weeklySubSchedulePeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertResourceWeeklySubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertResource">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="resource" type="ns1:resource" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertResourceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertResource">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="resource" type="ns1:resource" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertResourceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertActivity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activity" type="ns1:activity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertActivityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteResourceWeeklySubSchedulePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="scheduleExternalId" type="xs:string" />
+      <xs:element name="schedulePeriodId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteResourceWeeklySubSchedulePeriodResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateCampaignExternalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="newCampaignExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="oldCampaignExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateCampaignExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getResourceByExternalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getResourceByExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="ns1:resource" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertMultipleResources">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="resources" type="ns1:resource" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertMultipleResourcesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resourceListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertMultipleCampaigns">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="campaigns" type="tns:campaign" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="campaignListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="result" nillable="true" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="campaigns" nillable="true" type="tns:campaign" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertLocationSchedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="schedule" type="ns1:schedule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertLocationScheduleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getResourceSchedulesByCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="scheduleSearchCriteria" type="tns:scheduleSearchCriteria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getResourceSchedulesByCriteriaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:scheduleListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getResourcesByCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="resourceSearchCriteria" type="tns:resourceSearchCriteria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resourceSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceName" type="xs:string" />
+      <xs:element minOccurs="0" name="activityExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="campaignExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="programExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getResourcesByCriteriaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resourceListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateActivityExternalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="newActivityExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="oldActivityExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateActivityExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertProgram">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="program" type="tns:program" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertProgramResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertMultipleActivities">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="activities" type="ns1:activity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertMultipleActivitiesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:activityListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="copyResourceDeep">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sourceLocationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="sourceResourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="targetLocationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="targetResourceExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="copyResourceDeepResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteCampaignResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertCampaign">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="campaign" type="tns:campaign" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertCampaignResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteActivityByExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteResourceByExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="locationSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="createDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="locationName" type="xs:string" />
+      <xs:element minOccurs="0" name="locationUrl" type="xs:string" />
+      <xs:element minOccurs="0" name="state" type="xs:string" />
+      <xs:element minOccurs="0" name="zipCode" type="xs:string" />
+      <xs:element minOccurs="0" name="locationGroupExtId" type="xs:string" />
+      <xs:element minOccurs="0" name="locationGroupName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="locationExtIdsList" type="xs:string" />
+      <xs:element name="locationGroupId" type="xs:int" />
+      <xs:element name="exactMatchOnly" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="locationSearchGeoCriteria">
+    <xs:sequence>
+      <xs:element name="latitude" type="xs:double" />
+      <xs:element name="longitude" type="xs:double" />
+      <xs:element name="radius" type="xs:double" />
+      <xs:element name="maxNumberOfLocations" type="xs:int" />
+      <xs:element minOccurs="0" name="unit" type="tns:geoUnit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="locationListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="result" nillable="true" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="locations" type="ns1:location" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SecondaryResourcePoolListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="secondaryResourcePools" nillable="true" type="tns:secondaryResourcePool" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertActivity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activity" type="ns1:activity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertActivityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateResourceExternalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="newResourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="oldResourceExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateResourceExternalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertMultiplePrograms">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="programs" type="tns:program" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertMultipleProgramsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:programListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertMultipleLocations">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="locations" type="ns1:location" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertMultipleLocationsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:locationListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertResourceSchedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="schedule" type="ns1:schedule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertResourceScheduleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSecondaryResourcePoolsByCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="resourceSearchCriteria" type="tns:resourceSearchCriteria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationFromLocationGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationGroupExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationFromLocationGroupResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLocationGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationGroupExtId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLocationGroupResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:locationGroupResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="locationGroupResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+      <xs:element minOccurs="0" name="locationGroup" type="tns:locationGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addLocationToLocationGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationGroupExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addLocationToLocationGroupResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertLocationGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationGroup" type="tns:locationGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateInsertLocationGroupResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllLocationGroups">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAllLocationGroupsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:locationGroupListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="locationGroupListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="locationGroups" nillable="true" type="tns:locationGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationGroupExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteLocationGroupResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserLocationGroupLoginRights">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserLocationGroupLoginRightsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:userLocationGroupLoginRightsListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserLocationLoginRights">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserLocationLoginRightsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:userLocationLoginRightsListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setUserLocationGroupLoginRights">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="loginRights" type="tns:userLocationGroupLoginRights" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setUserLocationGroupLoginRightsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userLocationGroupLoginRightsListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="locationGroupLoginRights" nillable="true" type="tns:userLocationGroupLoginRights" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userLocationLoginRights">
+    <xs:sequence>
+      <xs:element name="canAccessAllLocation" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="locationExternalIds" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userLocationLoginRightsListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="tns:TTStatus" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="userLocationLoginRights" nillable="true" type="tns:userLocationLoginRights" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteUserLocationGroupLoginRights">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="locationGroupExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteUserLocationGroupLoginRightsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteUserLocationLoginRights">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteUserLocationLoginRightsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setUserLocationLoginRights">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="loginRights" type="tns:userLocationLoginRights" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setUserLocationLoginRightsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:TTStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSecondaryResourcePoolsByCriteriaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:SecondaryResourcePoolListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userLocationGroupLoginRights">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="locationGroupExternalIds" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="secondaryResourcePool">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="secondaryResourceInfo" nillable="true" type="tns:secondaryResourceInfo" />
+      <xs:element minOccurs="0" name="secondaryResourcePoolExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="secondaryResourceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="secondaryResourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="secondaryResourceName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="locationGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationGroupExtId" type="xs:string" />
+      <xs:element minOccurs="0" name="locationGroupName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="locationExternalIds" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="geoCoordinates">
+    <xs:sequence>
+      <xs:element name="latitude" type="xs:double" />
+      <xs:element name="longitude" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="emailFormatType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HTML" />
+      <xs:enumeration value="Plain Text" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="resourceGroupRules">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="names only" />
+      <xs:enumeration value="groups only" />
+      <xs:enumeration value="groups and names" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="scheduleType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Appointment-based schedule" />
+      <xs:enumeration value="Event-based schedule" />
+      <xs:enumeration value="Event Series" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="gender">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Not applicable" />
+      <xs:enumeration value="Female" />
+      <xs:enumeration value="Male" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="scheduleAvailabilityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UNAVAILABLE" />
+      <xs:enumeration value="AVAILABLE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="weekDay">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Sunday" />
+      <xs:enumeration value="Monday" />
+      <xs:enumeration value="Tuesday" />
+      <xs:enumeration value="Wednesday" />
+      <xs:enumeration value="Thursday" />
+      <xs:enumeration value="Friday" />
+      <xs:enumeration value="Saturday" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="month">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="JANUARY" />
+      <xs:enumeration value="FEBRUARY" />
+      <xs:enumeration value="MARCH" />
+      <xs:enumeration value="APRIL" />
+      <xs:enumeration value="MAY" />
+      <xs:enumeration value="JUNE" />
+      <xs:enumeration value="JULY" />
+      <xs:enumeration value="AUGUST" />
+      <xs:enumeration value="SEPTEMBER" />
+      <xs:enumeration value="OCTOBER" />
+      <xs:enumeration value="NOVEMBER" />
+      <xs:enumeration value="DECEMBER" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="overBookingRule">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="only when booking capacity is full for all available resources" />
+      <xs:enumeration value="when booking capacity is full for selected resource" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="resourceAllocationRule">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="resource name" />
+      <xs:enumeration value="resource rank" />
+      <xs:enumeration value="random order" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="appointmentGroupType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Simple Appointment" />
+      <xs:enumeration value="Compound Appointment" />
+      <xs:enumeration value="Dynamic Compound Appointment" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="locationAvailabilityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Administrators, receptionists, and clients" />
+      <xs:enumeration value="Administrators and receptionists" />
+      <xs:enumeration value="Administrators" />
+      <xs:enumeration value="None (under construction)" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="activityDuration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="displayName" type="xs:string" />
+      <xs:element minOccurs="0" name="durationInMinutes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="disposition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element minOccurs="0" name="dispositionExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="label" type="xs:string" />
+      <xs:element minOccurs="0" name="questionGroupExternalId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="suppressVisibilityPerApp">
+    <xs:sequence>
+      <xs:element name="appId" type="xs:int" />
+      <xs:element minOccurs="0" name="appName" type="xs:string" />
+      <xs:element name="suppressed" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="geoUnit">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="miles" />
+      <xs:enumeration value="kilometers" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

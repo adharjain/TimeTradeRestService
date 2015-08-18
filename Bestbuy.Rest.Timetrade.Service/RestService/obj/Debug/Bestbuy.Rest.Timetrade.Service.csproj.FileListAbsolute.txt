@@ -1,0 +1,16 @@
+C:\Users\A6001292\Desktop\RestService\RestService\bin\Json.dll
+C:\Users\A6001292\Desktop\RestService\RestService\bin\Json.pdb
+C:\Users\A6001292\Desktop\RestService\RestService\obj\Debug\Bestbuy.Rest.Timetrade.Service.csprojResolveAssemblyReference.cache
+C:\Users\A6001292\Desktop\RestService\RestService\bin\Bestbuy.Rest.Timetrade.Service.dll.config
+C:\Users\A6001292\Desktop\RestService\RestService\bin\Bestbuy.Rest.Timetrade.Service.dll
+C:\Users\A6001292\Desktop\RestService\RestService\bin\Bestbuy.Rest.Timetrade.Service.pdb
+C:\Users\A6001292\Desktop\RestService\RestService\obj\Debug\Bestbuy.Rest.Timetrade.Service.dll
+C:\Users\A6001292\Desktop\RestService\RestService\obj\Debug\Bestbuy.Rest.Timetrade.Service.pdb
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\RestService\obj\Debug\Bestbuy.Rest.Timetrade.Service.dll
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\RestService\obj\Debug\Bestbuy.Rest.Timetrade.Service.pdb
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\RestService\bin\Bestbuy.Rest.Timetrade.Service.dll.config
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\RestService\bin\Bestbuy.Rest.Timetrade.Service.dll
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\RestService\bin\Bestbuy.Rest.Timetrade.Service.pdb
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\RestService\bin\Json.dll
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\RestService\bin\Json.pdb
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\RestService\obj\Debug\Bestbuy.Rest.Timetrade.Service.csprojResolveAssemblyReference.cache

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c3125c9f-3951-45fc-898f-f4be03d185b1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://dnd01apl.na.bestbuy.com:8443/ExternalVendor/AppointmentServicesSOAP?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AppointmentServices.xsd" MetadataType="Schema" ID="083f5fa0-9995-4c11-96f8-b674e02e5225" SourceId="1" SourceUrl="https://bbuydev2api.timetradesystems.com/tc/api/6.4/AppointmentServices?xsd=4" />
+    <MetadataFile FileName="AppointmentServices1.xsd" MetadataType="Schema" ID="9cd53580-0839-4319-b36b-c8f338b63862" SourceId="1" SourceUrl="https://bbuydev2api.timetradesystems.com/tc/api/6.4/AppointmentServices?xsd=3" />
+    <MetadataFile FileName="AppointmentServices2.xsd" MetadataType="Schema" ID="da94e498-47aa-4e09-beb7-8ed76fa85a93" SourceId="1" SourceUrl="https://bbuydev2api.timetradesystems.com/tc/api/6.4/AppointmentServices?xsd=2" />
+    <MetadataFile FileName="AppointmentServices3.xsd" MetadataType="Schema" ID="9cf0b889-5f19-4dfa-89a2-8f54c4f99d14" SourceId="1" SourceUrl="https://bbuydev2api.timetradesystems.com/tc/api/6.4/AppointmentServices?xsd=1" />
+    <MetadataFile FileName="AppointmentServices.wsdl" MetadataType="Wsdl" ID="252fc13b-62dd-43c1-ac3b-d4250dcd25e7" SourceId="1" SourceUrl="https://dnd01apl.na.bestbuy.com:8443/ExternalVendor/AppointmentServicesSOAP?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

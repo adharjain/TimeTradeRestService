@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns1="http://services.timecommerce.timetrade.com/ws" targetNamespace="http://services.timecommerce.timetrade.com/configuration" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://bbuydev2api.timetradesystems.com:443/tc/api/6.4/AppointmentServices?xsd=1" namespace="http://services.timecommerce.timetrade.com/ws" />
+  <xs:complexType name="resource">
+    <xs:sequence>
+      <xs:element name="deleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="deletedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element minOccurs="0" name="emailAddressData" type="ns1:emailAddressData" />
+      <xs:element minOccurs="0" name="gender" type="ns1:gender" />
+      <xs:element minOccurs="0" name="isAlwaysAvailable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="locationExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="phoneData" type="ns1:phoneData" />
+      <xs:element minOccurs="0" name="propertyGroupExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceName" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceRules" type="ns1:resourceRules" />
+      <xs:element minOccurs="0" name="timezone" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="secondaryResourceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="secondaryResourceExternalId" type="xs:string" />
+      <xs:element minOccurs="0" name="secondaryResourceName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

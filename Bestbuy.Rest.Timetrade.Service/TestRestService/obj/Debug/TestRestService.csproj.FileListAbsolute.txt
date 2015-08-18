@@ -1,0 +1,16 @@
+C:\Users\A6001292\Desktop\RestService\TestRestService\bin\Debug\TestRestService.exe.config
+C:\Users\A6001292\Desktop\RestService\TestRestService\bin\Debug\TestRestService.exe
+C:\Users\A6001292\Desktop\RestService\TestRestService\bin\Debug\TestRestService.pdb
+C:\Users\A6001292\Desktop\RestService\TestRestService\obj\Debug\TestRestService.csprojResolveAssemblyReference.cache
+C:\Users\A6001292\Desktop\RestService\TestRestService\obj\Debug\TestRestService.exe
+C:\Users\A6001292\Desktop\RestService\TestRestService\obj\Debug\TestRestService.pdb
+C:\Users\A6001292\Desktop\RestService\TestRestService\bin\Debug\Json.dll
+C:\Users\A6001292\Desktop\RestService\TestRestService\bin\Debug\Json.pdb
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\TestRestService\bin\Debug\TestRestService.exe.config
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\TestRestService\bin\Debug\TestRestService.exe
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\TestRestService\bin\Debug\TestRestService.pdb
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\TestRestService\bin\Debug\Json.dll
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\TestRestService\bin\Debug\Json.pdb
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\TestRestService\obj\Debug\TestRestService.csprojResolveAssemblyReference.cache
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\TestRestService\obj\Debug\TestRestService.exe
+C:\code\TimeTrade\Bestbuy.Rest.Timetrade.Service\TestRestService\obj\Debug\TestRestService.pdb

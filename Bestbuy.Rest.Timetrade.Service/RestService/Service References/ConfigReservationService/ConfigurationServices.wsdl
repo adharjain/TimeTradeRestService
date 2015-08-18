@@ -1,0 +1,2333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.timecommerce.timetrade.com/ws" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ConfigurationServices" targetNamespace="http://services.timecommerce.timetrade.com/ws" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="UsernameToken" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" />
+          </wsp:Policy>
+        </sp:SupportingTokens>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://bbuydev2api.timetradesystems.com:443/tc/api/6.4/ConfigurationServices?xsd=1" namespace="http://services.timecommerce.timetrade.com/ws" />
+    </xsd:schema>
+  </types>
+  <message name="copyLocationDeep">
+    <part name="parameters" element="tns:copyLocationDeep" />
+  </message>
+  <message name="copyLocationDeepResponse">
+    <part name="parameters" element="tns:copyLocationDeepResponse" />
+  </message>
+  <message name="TTConfigurationServiceException">
+    <part name="fault" element="tns:TTConfigurationServiceException" />
+  </message>
+  <message name="deleteActivityByExternalId">
+    <part name="parameters" element="tns:deleteActivityByExternalId" />
+  </message>
+  <message name="deleteActivityByExternalIdResponse">
+    <part name="parameters" element="tns:deleteActivityByExternalIdResponse" />
+  </message>
+  <message name="deleteCampaignByExternalId">
+    <part name="parameters" element="tns:deleteCampaignByExternalId" />
+  </message>
+  <message name="deleteCampaignByExternalIdResponse">
+    <part name="parameters" element="tns:deleteCampaignByExternalIdResponse" />
+  </message>
+  <message name="deleteLocationByExternalId">
+    <part name="parameters" element="tns:deleteLocationByExternalId" />
+  </message>
+  <message name="deleteLocationByExternalIdResponse">
+    <part name="parameters" element="tns:deleteLocationByExternalIdResponse" />
+  </message>
+  <message name="deleteProgramByExternalId">
+    <part name="parameters" element="tns:deleteProgramByExternalId" />
+  </message>
+  <message name="deleteProgramByExternalIdResponse">
+    <part name="parameters" element="tns:deleteProgramByExternalIdResponse" />
+  </message>
+  <message name="deleteResourceByExternalId">
+    <part name="parameters" element="tns:deleteResourceByExternalId" />
+  </message>
+  <message name="deleteResourceByExternalIdResponse">
+    <part name="parameters" element="tns:deleteResourceByExternalIdResponse" />
+  </message>
+  <message name="getActivityByExternalId">
+    <part name="parameters" element="tns:getActivityByExternalId" />
+  </message>
+  <message name="getActivityByExternalIdResponse">
+    <part name="parameters" element="tns:getActivityByExternalIdResponse" />
+  </message>
+  <message name="getCampaignByExternalId">
+    <part name="parameters" element="tns:getCampaignByExternalId" />
+  </message>
+  <message name="getCampaignByExternalIdResponse">
+    <part name="parameters" element="tns:getCampaignByExternalIdResponse" />
+  </message>
+  <message name="getLocationsByCriteria">
+    <part name="parameters" element="tns:getLocationsByCriteria" />
+  </message>
+  <message name="getLocationsByCriteriaResponse">
+    <part name="parameters" element="tns:getLocationsByCriteriaResponse" />
+  </message>
+  <message name="getLocationsByGeoCriteria">
+    <part name="parameters" element="tns:getLocationsByGeoCriteria" />
+  </message>
+  <message name="getLocationsByGeoCriteriaResponse">
+    <part name="parameters" element="tns:getLocationsByGeoCriteriaResponse" />
+  </message>
+  <message name="getProgramByExternalId">
+    <part name="parameters" element="tns:getProgramByExternalId" />
+  </message>
+  <message name="getProgramByExternalIdResponse">
+    <part name="parameters" element="tns:getProgramByExternalIdResponse" />
+  </message>
+  <message name="getResourceByExternalId">
+    <part name="parameters" element="tns:getResourceByExternalId" />
+  </message>
+  <message name="getResourceByExternalIdResponse">
+    <part name="parameters" element="tns:getResourceByExternalIdResponse" />
+  </message>
+  <message name="insertActivity">
+    <part name="parameters" element="tns:insertActivity" />
+  </message>
+  <message name="insertActivityResponse">
+    <part name="parameters" element="tns:insertActivityResponse" />
+  </message>
+  <message name="insertCampaign">
+    <part name="parameters" element="tns:insertCampaign" />
+  </message>
+  <message name="insertCampaignResponse">
+    <part name="parameters" element="tns:insertCampaignResponse" />
+  </message>
+  <message name="insertLocation">
+    <part name="parameters" element="tns:insertLocation" />
+  </message>
+  <message name="insertLocationResponse">
+    <part name="parameters" element="tns:insertLocationResponse" />
+  </message>
+  <message name="insertMultipleActivities">
+    <part name="parameters" element="tns:insertMultipleActivities" />
+  </message>
+  <message name="insertMultipleActivitiesResponse">
+    <part name="parameters" element="tns:insertMultipleActivitiesResponse" />
+  </message>
+  <message name="insertMultipleCampaigns">
+    <part name="parameters" element="tns:insertMultipleCampaigns" />
+  </message>
+  <message name="insertMultipleCampaignsResponse">
+    <part name="parameters" element="tns:insertMultipleCampaignsResponse" />
+  </message>
+  <message name="insertMultipleLocations">
+    <part name="parameters" element="tns:insertMultipleLocations" />
+  </message>
+  <message name="insertMultipleLocationsResponse">
+    <part name="parameters" element="tns:insertMultipleLocationsResponse" />
+  </message>
+  <message name="insertMultiplePrograms">
+    <part name="parameters" element="tns:insertMultiplePrograms" />
+  </message>
+  <message name="insertMultipleProgramsResponse">
+    <part name="parameters" element="tns:insertMultipleProgramsResponse" />
+  </message>
+  <message name="insertMultipleResources">
+    <part name="parameters" element="tns:insertMultipleResources" />
+  </message>
+  <message name="insertMultipleResourcesResponse">
+    <part name="parameters" element="tns:insertMultipleResourcesResponse" />
+  </message>
+  <message name="insertProgram">
+    <part name="parameters" element="tns:insertProgram" />
+  </message>
+  <message name="insertProgramResponse">
+    <part name="parameters" element="tns:insertProgramResponse" />
+  </message>
+  <message name="insertResource">
+    <part name="parameters" element="tns:insertResource" />
+  </message>
+  <message name="insertResourceResponse">
+    <part name="parameters" element="tns:insertResourceResponse" />
+  </message>
+  <message name="updateActivityExternalId">
+    <part name="parameters" element="tns:updateActivityExternalId" />
+  </message>
+  <message name="updateActivityExternalIdResponse">
+    <part name="parameters" element="tns:updateActivityExternalIdResponse" />
+  </message>
+  <message name="updateCampaignExternalId">
+    <part name="parameters" element="tns:updateCampaignExternalId" />
+  </message>
+  <message name="updateCampaignExternalIdResponse">
+    <part name="parameters" element="tns:updateCampaignExternalIdResponse" />
+  </message>
+  <message name="updateInsertActivity">
+    <part name="parameters" element="tns:updateInsertActivity" />
+  </message>
+  <message name="updateInsertActivityResponse">
+    <part name="parameters" element="tns:updateInsertActivityResponse" />
+  </message>
+  <message name="updateInsertCampaign">
+    <part name="parameters" element="tns:updateInsertCampaign" />
+  </message>
+  <message name="updateInsertCampaignResponse">
+    <part name="parameters" element="tns:updateInsertCampaignResponse" />
+  </message>
+  <message name="updateInsertLocation">
+    <part name="parameters" element="tns:updateInsertLocation" />
+  </message>
+  <message name="updateInsertLocationResponse">
+    <part name="parameters" element="tns:updateInsertLocationResponse" />
+  </message>
+  <message name="updateInsertMultipleResources">
+    <part name="parameters" element="tns:updateInsertMultipleResources" />
+  </message>
+  <message name="updateInsertMultipleResourcesResponse">
+    <part name="parameters" element="tns:updateInsertMultipleResourcesResponse" />
+  </message>
+  <message name="updateInsertProgram">
+    <part name="parameters" element="tns:updateInsertProgram" />
+  </message>
+  <message name="updateInsertProgramResponse">
+    <part name="parameters" element="tns:updateInsertProgramResponse" />
+  </message>
+  <message name="updateInsertResource">
+    <part name="parameters" element="tns:updateInsertResource" />
+  </message>
+  <message name="updateInsertResourceResponse">
+    <part name="parameters" element="tns:updateInsertResourceResponse" />
+  </message>
+  <message name="updateLocationExternalId">
+    <part name="parameters" element="tns:updateLocationExternalId" />
+  </message>
+  <message name="updateLocationExternalIdResponse">
+    <part name="parameters" element="tns:updateLocationExternalIdResponse" />
+  </message>
+  <message name="updateProgramExternalId">
+    <part name="parameters" element="tns:updateProgramExternalId" />
+  </message>
+  <message name="updateProgramExternalIdResponse">
+    <part name="parameters" element="tns:updateProgramExternalIdResponse" />
+  </message>
+  <message name="updateResourceExternalId">
+    <part name="parameters" element="tns:updateResourceExternalId" />
+  </message>
+  <message name="updateResourceExternalIdResponse">
+    <part name="parameters" element="tns:updateResourceExternalIdResponse" />
+  </message>
+  <message name="getResourceScheduleByExternalId">
+    <part name="parameters" element="tns:getResourceScheduleByExternalId" />
+  </message>
+  <message name="getResourceScheduleByExternalIdResponse">
+    <part name="parameters" element="tns:getResourceScheduleByExternalIdResponse" />
+  </message>
+  <message name="deleteResourceScheduleByExternalId">
+    <part name="parameters" element="tns:deleteResourceScheduleByExternalId" />
+  </message>
+  <message name="deleteResourceScheduleByExternalIdResponse">
+    <part name="parameters" element="tns:deleteResourceScheduleByExternalIdResponse" />
+  </message>
+  <message name="insertResourceSchedule">
+    <part name="parameters" element="tns:insertResourceSchedule" />
+  </message>
+  <message name="insertResourceScheduleResponse">
+    <part name="parameters" element="tns:insertResourceScheduleResponse" />
+  </message>
+  <message name="updateInsertResourceSchedule">
+    <part name="parameters" element="tns:updateInsertResourceSchedule" />
+  </message>
+  <message name="updateInsertResourceScheduleResponse">
+    <part name="parameters" element="tns:updateInsertResourceScheduleResponse" />
+  </message>
+  <message name="updateResourceScheduleExternalId">
+    <part name="parameters" element="tns:updateResourceScheduleExternalId" />
+  </message>
+  <message name="updateResourceScheduleExternalIdResponse">
+    <part name="parameters" element="tns:updateResourceScheduleExternalIdResponse" />
+  </message>
+  <message name="updateInsertResourceMonthlySubSchedulePeriod">
+    <part name="parameters" element="tns:updateInsertResourceMonthlySubSchedulePeriod" />
+  </message>
+  <message name="updateInsertResourceMonthlySubSchedulePeriodResponse">
+    <part name="parameters" element="tns:updateInsertResourceMonthlySubSchedulePeriodResponse" />
+  </message>
+  <message name="updateInsertResourceOneTimeSubSchedulePeriod">
+    <part name="parameters" element="tns:updateInsertResourceOneTimeSubSchedulePeriod" />
+  </message>
+  <message name="updateInsertResourceOneTimeSubSchedulePeriodResponse">
+    <part name="parameters" element="tns:updateInsertResourceOneTimeSubSchedulePeriodResponse" />
+  </message>
+  <message name="updateInsertResourceWeeklySubSchedulePeriod">
+    <part name="parameters" element="tns:updateInsertResourceWeeklySubSchedulePeriod" />
+  </message>
+  <message name="updateInsertResourceWeeklySubSchedulePeriodResponse">
+    <part name="parameters" element="tns:updateInsertResourceWeeklySubSchedulePeriodResponse" />
+  </message>
+  <message name="updateInsertResourceYearlySubSchedulePeriod">
+    <part name="parameters" element="tns:updateInsertResourceYearlySubSchedulePeriod" />
+  </message>
+  <message name="updateInsertResourceYearlySubSchedulePeriodResponse">
+    <part name="parameters" element="tns:updateInsertResourceYearlySubSchedulePeriodResponse" />
+  </message>
+  <message name="deleteAllResourceMonthlySubSchedulePeriods">
+    <part name="parameters" element="tns:deleteAllResourceMonthlySubSchedulePeriods" />
+  </message>
+  <message name="deleteAllResourceMonthlySubSchedulePeriodsResponse">
+    <part name="parameters" element="tns:deleteAllResourceMonthlySubSchedulePeriodsResponse" />
+  </message>
+  <message name="deleteAllResourceOneTimeSubSchedulePeriods">
+    <part name="parameters" element="tns:deleteAllResourceOneTimeSubSchedulePeriods" />
+  </message>
+  <message name="deleteAllResourceOneTimeSubSchedulePeriodsResponse">
+    <part name="parameters" element="tns:deleteAllResourceOneTimeSubSchedulePeriodsResponse" />
+  </message>
+  <message name="deleteAllResourceWeeklySubSchedulePeriods">
+    <part name="parameters" element="tns:deleteAllResourceWeeklySubSchedulePeriods" />
+  </message>
+  <message name="deleteAllResourceWeeklySubSchedulePeriodsResponse">
+    <part name="parameters" element="tns:deleteAllResourceWeeklySubSchedulePeriodsResponse" />
+  </message>
+  <message name="deleteAllResourceYearlySubSchedulePeriods">
+    <part name="parameters" element="tns:deleteAllResourceYearlySubSchedulePeriods" />
+  </message>
+  <message name="deleteAllResourceYearlySubSchedulePeriodsResponse">
+    <part name="parameters" element="tns:deleteAllResourceYearlySubSchedulePeriodsResponse" />
+  </message>
+  <message name="copyResourceDeep">
+    <part name="parameters" element="tns:copyResourceDeep" />
+  </message>
+  <message name="copyResourceDeepResponse">
+    <part name="parameters" element="tns:copyResourceDeepResponse" />
+  </message>
+  <message name="getResourcesByCriteria">
+    <part name="parameters" element="tns:getResourcesByCriteria" />
+  </message>
+  <message name="getResourcesByCriteriaResponse">
+    <part name="parameters" element="tns:getResourcesByCriteriaResponse" />
+  </message>
+  <message name="deleteResourceMonthlySubSchedulePeriod">
+    <part name="parameters" element="tns:deleteResourceMonthlySubSchedulePeriod" />
+  </message>
+  <message name="deleteResourceMonthlySubSchedulePeriodResponse">
+    <part name="parameters" element="tns:deleteResourceMonthlySubSchedulePeriodResponse" />
+  </message>
+  <message name="deleteResourceOneTimeSubSchedulePeriod">
+    <part name="parameters" element="tns:deleteResourceOneTimeSubSchedulePeriod" />
+  </message>
+  <message name="deleteResourceOneTimeSubSchedulePeriodResponse">
+    <part name="parameters" element="tns:deleteResourceOneTimeSubSchedulePeriodResponse" />
+  </message>
+  <message name="deleteResourceWeeklySubSchedulePeriod">
+    <part name="parameters" element="tns:deleteResourceWeeklySubSchedulePeriod" />
+  </message>
+  <message name="deleteResourceWeeklySubSchedulePeriodResponse">
+    <part name="parameters" element="tns:deleteResourceWeeklySubSchedulePeriodResponse" />
+  </message>
+  <message name="deleteResourceYearlySubSchedulePeriod">
+    <part name="parameters" element="tns:deleteResourceYearlySubSchedulePeriod" />
+  </message>
+  <message name="deleteResourceYearlySubSchedulePeriodResponse">
+    <part name="parameters" element="tns:deleteResourceYearlySubSchedulePeriodResponse" />
+  </message>
+  <message name="getResourceSchedulesByCriteria">
+    <part name="parameters" element="tns:getResourceSchedulesByCriteria" />
+  </message>
+  <message name="getResourceSchedulesByCriteriaResponse">
+    <part name="parameters" element="tns:getResourceSchedulesByCriteriaResponse" />
+  </message>
+  <message name="getActivities">
+    <part name="parameters" element="tns:getActivities" />
+  </message>
+  <message name="getActivitiesResponse">
+    <part name="parameters" element="tns:getActivitiesResponse" />
+  </message>
+  <message name="getPrograms">
+    <part name="parameters" element="tns:getPrograms" />
+  </message>
+  <message name="getProgramsResponse">
+    <part name="parameters" element="tns:getProgramsResponse" />
+  </message>
+  <message name="getCampaigns">
+    <part name="parameters" element="tns:getCampaigns" />
+  </message>
+  <message name="getCampaignsResponse">
+    <part name="parameters" element="tns:getCampaignsResponse" />
+  </message>
+  <message name="getAllResourceSchedules">
+    <part name="parameters" element="tns:getAllResourceSchedules" />
+  </message>
+  <message name="getAllResourceSchedulesResponse">
+    <part name="parameters" element="tns:getAllResourceSchedulesResponse" />
+  </message>
+  <message name="insertLocationSchedule">
+    <part name="parameters" element="tns:insertLocationSchedule" />
+  </message>
+  <message name="insertLocationScheduleResponse">
+    <part name="parameters" element="tns:insertLocationScheduleResponse" />
+  </message>
+  <message name="updateInsertLocationSchedule">
+    <part name="parameters" element="tns:updateInsertLocationSchedule" />
+  </message>
+  <message name="updateInsertLocationScheduleResponse">
+    <part name="parameters" element="tns:updateInsertLocationScheduleResponse" />
+  </message>
+  <message name="deleteLocationScheduleByExternalId">
+    <part name="parameters" element="tns:deleteLocationScheduleByExternalId" />
+  </message>
+  <message name="deleteLocationScheduleByExternalIdResponse">
+    <part name="parameters" element="tns:deleteLocationScheduleByExternalIdResponse" />
+  </message>
+  <message name="getAllLocationSchedules">
+    <part name="parameters" element="tns:getAllLocationSchedules" />
+  </message>
+  <message name="getAllLocationSchedulesResponse">
+    <part name="parameters" element="tns:getAllLocationSchedulesResponse" />
+  </message>
+  <message name="getLocationSchedulesByCriteria">
+    <part name="parameters" element="tns:getLocationSchedulesByCriteria" />
+  </message>
+  <message name="getLocationSchedulesByCriteriaResponse">
+    <part name="parameters" element="tns:getLocationSchedulesByCriteriaResponse" />
+  </message>
+  <message name="getSecondaryResourcePoolsByCriteria">
+    <part name="parameters" element="tns:getSecondaryResourcePoolsByCriteria" />
+  </message>
+  <message name="getSecondaryResourcePoolsByCriteriaResponse">
+    <part name="parameters" element="tns:getSecondaryResourcePoolsByCriteriaResponse" />
+  </message>
+  <message name="updateInsertLocationGroup">
+    <part name="parameters" element="tns:updateInsertLocationGroup" />
+  </message>
+  <message name="updateInsertLocationGroupResponse">
+    <part name="parameters" element="tns:updateInsertLocationGroupResponse" />
+  </message>
+  <message name="addLocationToLocationGroup">
+    <part name="parameters" element="tns:addLocationToLocationGroup" />
+  </message>
+  <message name="addLocationToLocationGroupResponse">
+    <part name="parameters" element="tns:addLocationToLocationGroupResponse" />
+  </message>
+  <message name="deleteLocationFromLocationGroup">
+    <part name="parameters" element="tns:deleteLocationFromLocationGroup" />
+  </message>
+  <message name="deleteLocationFromLocationGroupResponse">
+    <part name="parameters" element="tns:deleteLocationFromLocationGroupResponse" />
+  </message>
+  <message name="getLocationGroup">
+    <part name="parameters" element="tns:getLocationGroup" />
+  </message>
+  <message name="getLocationGroupResponse">
+    <part name="parameters" element="tns:getLocationGroupResponse" />
+  </message>
+  <message name="getAllLocationGroups">
+    <part name="parameters" element="tns:getAllLocationGroups" />
+  </message>
+  <message name="getAllLocationGroupsResponse">
+    <part name="parameters" element="tns:getAllLocationGroupsResponse" />
+  </message>
+  <message name="deleteLocationGroup">
+    <part name="parameters" element="tns:deleteLocationGroup" />
+  </message>
+  <message name="deleteLocationGroupResponse">
+    <part name="parameters" element="tns:deleteLocationGroupResponse" />
+  </message>
+  <message name="getUserLocationLoginRights">
+    <part name="parameters" element="tns:getUserLocationLoginRights" />
+  </message>
+  <message name="getUserLocationLoginRightsResponse">
+    <part name="parameters" element="tns:getUserLocationLoginRightsResponse" />
+  </message>
+  <message name="setUserLocationLoginRights">
+    <part name="parameters" element="tns:setUserLocationLoginRights" />
+  </message>
+  <message name="setUserLocationLoginRightsResponse">
+    <part name="parameters" element="tns:setUserLocationLoginRightsResponse" />
+  </message>
+  <message name="deleteUserLocationLoginRights">
+    <part name="parameters" element="tns:deleteUserLocationLoginRights" />
+  </message>
+  <message name="deleteUserLocationLoginRightsResponse">
+    <part name="parameters" element="tns:deleteUserLocationLoginRightsResponse" />
+  </message>
+  <message name="getUserLocationGroupLoginRights">
+    <part name="parameters" element="tns:getUserLocationGroupLoginRights" />
+  </message>
+  <message name="getUserLocationGroupLoginRightsResponse">
+    <part name="parameters" element="tns:getUserLocationGroupLoginRightsResponse" />
+  </message>
+  <message name="setUserLocationGroupLoginRights">
+    <part name="parameters" element="tns:setUserLocationGroupLoginRights" />
+  </message>
+  <message name="setUserLocationGroupLoginRightsResponse">
+    <part name="parameters" element="tns:setUserLocationGroupLoginRightsResponse" />
+  </message>
+  <message name="deleteUserLocationGroupLoginRights">
+    <part name="parameters" element="tns:deleteUserLocationGroupLoginRights" />
+  </message>
+  <message name="deleteUserLocationGroupLoginRightsResponse">
+    <part name="parameters" element="tns:deleteUserLocationGroupLoginRightsResponse" />
+  </message>
+  <message name="updateInsertActivityToResourceAssignment">
+    <part name="parameters" element="tns:updateInsertActivityToResourceAssignment" />
+  </message>
+  <message name="updateInsertActivityToResourceAssignmentResponse">
+    <part name="parameters" element="tns:updateInsertActivityToResourceAssignmentResponse" />
+  </message>
+  <message name="deleteActivityToResourceAssignment">
+    <part name="parameters" element="tns:deleteActivityToResourceAssignment" />
+  </message>
+  <message name="deleteActivityToResourceAssignmentResponse">
+    <part name="parameters" element="tns:deleteActivityToResourceAssignmentResponse" />
+  </message>
+  <message name="getActivityToResourceAssignment">
+    <part name="parameters" element="tns:getActivityToResourceAssignment" />
+  </message>
+  <message name="getActivityToResourceAssignmentResponse">
+    <part name="parameters" element="tns:getActivityToResourceAssignmentResponse" />
+  </message>
+  <message name="getAllActivityToResourceAssignment">
+    <part name="parameters" element="tns:getAllActivityToResourceAssignment" />
+  </message>
+  <message name="getAllActivityToResourceAssignmentResponse">
+    <part name="parameters" element="tns:getAllActivityToResourceAssignmentResponse" />
+  </message>
+  <message name="deleteAllLocationMonthlySubSchedulePeriods">
+    <part name="parameters" element="tns:deleteAllLocationMonthlySubSchedulePeriods" />
+  </message>
+  <message name="deleteAllLocationMonthlySubSchedulePeriodsResponse">
+    <part name="parameters" element="tns:deleteAllLocationMonthlySubSchedulePeriodsResponse" />
+  </message>
+  <message name="deleteAllLocationWeeklySubSchedulePeriods">
+    <part name="parameters" element="tns:deleteAllLocationWeeklySubSchedulePeriods" />
+  </message>
+  <message name="deleteAllLocationWeeklySubSchedulePeriodsResponse">
+    <part name="parameters" element="tns:deleteAllLocationWeeklySubSchedulePeriodsResponse" />
+  </message>
+  <message name="deleteAllLocationYearlySubSchedulePeriods">
+    <part name="parameters" element="tns:deleteAllLocationYearlySubSchedulePeriods" />
+  </message>
+  <message name="deleteAllLocationYearlySubSchedulePeriodsResponse">
+    <part name="parameters" element="tns:deleteAllLocationYearlySubSchedulePeriodsResponse" />
+  </message>
+  <message name="deleteAllLocationOneTimeSubSchedulePeriods">
+    <part name="parameters" element="tns:deleteAllLocationOneTimeSubSchedulePeriods" />
+  </message>
+  <message name="deleteAllLocationOneTimeSubSchedulePeriodsResponse">
+    <part name="parameters" element="tns:deleteAllLocationOneTimeSubSchedulePeriodsResponse" />
+  </message>
+  <message name="deleteLocationMonthlySubSchedulePeriod">
+    <part name="parameters" element="tns:deleteLocationMonthlySubSchedulePeriod" />
+  </message>
+  <message name="deleteLocationMonthlySubSchedulePeriodResponse">
+    <part name="parameters" element="tns:deleteLocationMonthlySubSchedulePeriodResponse" />
+  </message>
+  <message name="deleteLocationWeeklySubSchedulePeriod">
+    <part name="parameters" element="tns:deleteLocationWeeklySubSchedulePeriod" />
+  </message>
+  <message name="deleteLocationWeeklySubSchedulePeriodResponse">
+    <part name="parameters" element="tns:deleteLocationWeeklySubSchedulePeriodResponse" />
+  </message>
+  <message name="deleteLocationYearlySubSchedulePeriod">
+    <part name="parameters" element="tns:deleteLocationYearlySubSchedulePeriod" />
+  </message>
+  <message name="deleteLocationYearlySubSchedulePeriodResponse">
+    <part name="parameters" element="tns:deleteLocationYearlySubSchedulePeriodResponse" />
+  </message>
+  <message name="deleteLocationOneTimeSubSchedulePeriod">
+    <part name="parameters" element="tns:deleteLocationOneTimeSubSchedulePeriod" />
+  </message>
+  <message name="deleteLocationOneTimeSubSchedulePeriodResponse">
+    <part name="parameters" element="tns:deleteLocationOneTimeSubSchedulePeriodResponse" />
+  </message>
+  <message name="updateInsertLocationMonthlySubSchedulePeriod">
+    <part name="parameters" element="tns:updateInsertLocationMonthlySubSchedulePeriod" />
+  </message>
+  <message name="updateInsertLocationMonthlySubSchedulePeriodResponse">
+    <part name="parameters" element="tns:updateInsertLocationMonthlySubSchedulePeriodResponse" />
+  </message>
+  <message name="updateInsertLocationWeeklySubSchedulePeriod">
+    <part name="parameters" element="tns:updateInsertLocationWeeklySubSchedulePeriod" />
+  </message>
+  <message name="updateInsertLocationWeeklySubSchedulePeriodResponse">
+    <part name="parameters" element="tns:updateInsertLocationWeeklySubSchedulePeriodResponse" />
+  </message>
+  <message name="updateInsertLocationYearlySubSchedulePeriod">
+    <part name="parameters" element="tns:updateInsertLocationYearlySubSchedulePeriod" />
+  </message>
+  <message name="updateInsertLocationYearlySubSchedulePeriodResponse">
+    <part name="parameters" element="tns:updateInsertLocationYearlySubSchedulePeriodResponse" />
+  </message>
+  <message name="updateInsertLocationOneTimeSubSchedulePeriod">
+    <part name="parameters" element="tns:updateInsertLocationOneTimeSubSchedulePeriod" />
+  </message>
+  <message name="updateInsertLocationOneTimeSubSchedulePeriodResponse">
+    <part name="parameters" element="tns:updateInsertLocationOneTimeSubSchedulePeriodResponse" />
+  </message>
+  <message name="updateInsertUserToResourceVisibility">
+    <part name="parameters" element="tns:updateInsertUserToResourceVisibility" />
+  </message>
+  <message name="updateInsertUserToResourceVisibilityResponse">
+    <part name="parameters" element="tns:updateInsertUserToResourceVisibilityResponse" />
+  </message>
+  <message name="deleteUserToResourceVisibility">
+    <part name="parameters" element="tns:deleteUserToResourceVisibility" />
+  </message>
+  <message name="deleteUserToResourceVisibilityResponse">
+    <part name="parameters" element="tns:deleteUserToResourceVisibilityResponse" />
+  </message>
+  <message name="getUserToResourceVisibility">
+    <part name="parameters" element="tns:getUserToResourceVisibility" />
+  </message>
+  <message name="getUserToResourceVisibilityResponse">
+    <part name="parameters" element="tns:getUserToResourceVisibilityResponse" />
+  </message>
+  <message name="getAllUserToResourceVisibility">
+    <part name="parameters" element="tns:getAllUserToResourceVisibility" />
+  </message>
+  <message name="getAllUserToResourceVisibilityResponse">
+    <part name="parameters" element="tns:getAllUserToResourceVisibilityResponse" />
+  </message>
+  <message name="getResourceCharacteristics">
+    <part name="parameters" element="tns:getResourceCharacteristics" />
+  </message>
+  <message name="getResourceCharacteristicsResponse">
+    <part name="parameters" element="tns:getResourceCharacteristicsResponse" />
+  </message>
+  <message name="updateInsertResourceCharacteristics">
+    <part name="parameters" element="tns:updateInsertResourceCharacteristics" />
+  </message>
+  <message name="updateInsertResourceCharacteristicsResponse">
+    <part name="parameters" element="tns:updateInsertResourceCharacteristicsResponse" />
+  </message>
+  <message name="deleteAllResourceCharacteristics">
+    <part name="parameters" element="tns:deleteAllResourceCharacteristics" />
+  </message>
+  <message name="deleteAllResourceCharacteristicsResponse">
+    <part name="parameters" element="tns:deleteAllResourceCharacteristicsResponse" />
+  </message>
+  <message name="deleteResourceOneTimeSubSchedulePeriodByDateRange">
+    <part name="parameters" element="tns:deleteResourceOneTimeSubSchedulePeriodByDateRange" />
+  </message>
+  <message name="deleteResourceOneTimeSubSchedulePeriodByDateRangeResponse">
+    <part name="parameters" element="tns:deleteResourceOneTimeSubSchedulePeriodByDateRangeResponse" />
+  </message>
+  <message name="deleteLocationOneTimeSubSchedulePeriodByDateRange">
+    <part name="parameters" element="tns:deleteLocationOneTimeSubSchedulePeriodByDateRange" />
+  </message>
+  <message name="deleteLocationOneTimeSubSchedulePeriodByDateRangeResponse">
+    <part name="parameters" element="tns:deleteLocationOneTimeSubSchedulePeriodByDateRangeResponse" />
+  </message>
+  <portType name="ConfigurationServices">
+    <operation name="copyLocationDeep">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/copyLocationDeepRequest" message="tns:copyLocationDeep" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/copyLocationDeepResponse" message="tns:copyLocationDeepResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/copyLocationDeep/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteActivityByExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteActivityByExternalIdRequest" message="tns:deleteActivityByExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteActivityByExternalIdResponse" message="tns:deleteActivityByExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteActivityByExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteCampaignByExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteCampaignByExternalIdRequest" message="tns:deleteCampaignByExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteCampaignByExternalIdResponse" message="tns:deleteCampaignByExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteCampaignByExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteLocationByExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationByExternalIdRequest" message="tns:deleteLocationByExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationByExternalIdResponse" message="tns:deleteLocationByExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationByExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteProgramByExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteProgramByExternalIdRequest" message="tns:deleteProgramByExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteProgramByExternalIdResponse" message="tns:deleteProgramByExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteProgramByExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteResourceByExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceByExternalIdRequest" message="tns:deleteResourceByExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceByExternalIdResponse" message="tns:deleteResourceByExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceByExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getActivityByExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getActivityByExternalIdRequest" message="tns:getActivityByExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getActivityByExternalIdResponse" message="tns:getActivityByExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getActivityByExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getCampaignByExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getCampaignByExternalIdRequest" message="tns:getCampaignByExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getCampaignByExternalIdResponse" message="tns:getCampaignByExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getCampaignByExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getLocationsByCriteria">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getLocationsByCriteriaRequest" message="tns:getLocationsByCriteria" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getLocationsByCriteriaResponse" message="tns:getLocationsByCriteriaResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getLocationsByCriteria/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getLocationsByGeoCriteria">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getLocationsByGeoCriteriaRequest" message="tns:getLocationsByGeoCriteria" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getLocationsByGeoCriteriaResponse" message="tns:getLocationsByGeoCriteriaResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getLocationsByGeoCriteria/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getProgramByExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getProgramByExternalIdRequest" message="tns:getProgramByExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getProgramByExternalIdResponse" message="tns:getProgramByExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getProgramByExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getResourceByExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getResourceByExternalIdRequest" message="tns:getResourceByExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getResourceByExternalIdResponse" message="tns:getResourceByExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getResourceByExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="insertActivity">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertActivityRequest" message="tns:insertActivity" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertActivityResponse" message="tns:insertActivityResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertActivity/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="insertCampaign">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertCampaignRequest" message="tns:insertCampaign" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertCampaignResponse" message="tns:insertCampaignResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertCampaign/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="insertLocation">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertLocationRequest" message="tns:insertLocation" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertLocationResponse" message="tns:insertLocationResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertLocation/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="insertMultipleActivities">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertMultipleActivitiesRequest" message="tns:insertMultipleActivities" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertMultipleActivitiesResponse" message="tns:insertMultipleActivitiesResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertMultipleActivities/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="insertMultipleCampaigns">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertMultipleCampaignsRequest" message="tns:insertMultipleCampaigns" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertMultipleCampaignsResponse" message="tns:insertMultipleCampaignsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertMultipleCampaigns/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="insertMultipleLocations">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertMultipleLocationsRequest" message="tns:insertMultipleLocations" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertMultipleLocationsResponse" message="tns:insertMultipleLocationsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertMultipleLocations/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="insertMultiplePrograms">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertMultipleProgramsRequest" message="tns:insertMultiplePrograms" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertMultipleProgramsResponse" message="tns:insertMultipleProgramsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertMultiplePrograms/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="insertMultipleResources">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertMultipleResourcesRequest" message="tns:insertMultipleResources" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertMultipleResourcesResponse" message="tns:insertMultipleResourcesResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertMultipleResources/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="insertProgram">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertProgramRequest" message="tns:insertProgram" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertProgramResponse" message="tns:insertProgramResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertProgram/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="insertResource">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertResourceRequest" message="tns:insertResource" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertResourceResponse" message="tns:insertResourceResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertResource/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateActivityExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateActivityExternalIdRequest" message="tns:updateActivityExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateActivityExternalIdResponse" message="tns:updateActivityExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateActivityExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateCampaignExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateCampaignExternalIdRequest" message="tns:updateCampaignExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateCampaignExternalIdResponse" message="tns:updateCampaignExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateCampaignExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertActivity">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertActivityRequest" message="tns:updateInsertActivity" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertActivityResponse" message="tns:updateInsertActivityResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertActivity/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertCampaign">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertCampaignRequest" message="tns:updateInsertCampaign" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertCampaignResponse" message="tns:updateInsertCampaignResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertCampaign/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertLocation">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationRequest" message="tns:updateInsertLocation" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationResponse" message="tns:updateInsertLocationResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocation/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertMultipleResources">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertMultipleResourcesRequest" message="tns:updateInsertMultipleResources" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertMultipleResourcesResponse" message="tns:updateInsertMultipleResourcesResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertMultipleResources/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertProgram">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertProgramRequest" message="tns:updateInsertProgram" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertProgramResponse" message="tns:updateInsertProgramResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertProgram/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertResource">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceRequest" message="tns:updateInsertResource" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceResponse" message="tns:updateInsertResourceResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResource/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateLocationExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateLocationExternalIdRequest" message="tns:updateLocationExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateLocationExternalIdResponse" message="tns:updateLocationExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateLocationExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateProgramExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateProgramExternalIdRequest" message="tns:updateProgramExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateProgramExternalIdResponse" message="tns:updateProgramExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateProgramExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateResourceExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateResourceExternalIdRequest" message="tns:updateResourceExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateResourceExternalIdResponse" message="tns:updateResourceExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateResourceExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getResourceScheduleByExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getResourceScheduleByExternalIdRequest" message="tns:getResourceScheduleByExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getResourceScheduleByExternalIdResponse" message="tns:getResourceScheduleByExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getResourceScheduleByExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteResourceScheduleByExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceScheduleByExternalIdRequest" message="tns:deleteResourceScheduleByExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceScheduleByExternalIdResponse" message="tns:deleteResourceScheduleByExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceScheduleByExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="insertResourceSchedule">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertResourceScheduleRequest" message="tns:insertResourceSchedule" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertResourceScheduleResponse" message="tns:insertResourceScheduleResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertResourceSchedule/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertResourceSchedule">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceScheduleRequest" message="tns:updateInsertResourceSchedule" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceScheduleResponse" message="tns:updateInsertResourceScheduleResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceSchedule/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateResourceScheduleExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateResourceScheduleExternalIdRequest" message="tns:updateResourceScheduleExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateResourceScheduleExternalIdResponse" message="tns:updateResourceScheduleExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateResourceScheduleExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertResourceMonthlySubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceMonthlySubSchedulePeriodRequest" message="tns:updateInsertResourceMonthlySubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceMonthlySubSchedulePeriodResponse" message="tns:updateInsertResourceMonthlySubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceMonthlySubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertResourceOneTimeSubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceOneTimeSubSchedulePeriodRequest" message="tns:updateInsertResourceOneTimeSubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceOneTimeSubSchedulePeriodResponse" message="tns:updateInsertResourceOneTimeSubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceOneTimeSubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertResourceWeeklySubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceWeeklySubSchedulePeriodRequest" message="tns:updateInsertResourceWeeklySubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceWeeklySubSchedulePeriodResponse" message="tns:updateInsertResourceWeeklySubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceWeeklySubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertResourceYearlySubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceYearlySubSchedulePeriodRequest" message="tns:updateInsertResourceYearlySubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceYearlySubSchedulePeriodResponse" message="tns:updateInsertResourceYearlySubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceYearlySubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteAllResourceMonthlySubSchedulePeriods">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllResourceMonthlySubSchedulePeriodsRequest" message="tns:deleteAllResourceMonthlySubSchedulePeriods" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllResourceMonthlySubSchedulePeriodsResponse" message="tns:deleteAllResourceMonthlySubSchedulePeriodsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllResourceMonthlySubSchedulePeriods/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteAllResourceOneTimeSubSchedulePeriods">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllResourceOneTimeSubSchedulePeriodsRequest" message="tns:deleteAllResourceOneTimeSubSchedulePeriods" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllResourceOneTimeSubSchedulePeriodsResponse" message="tns:deleteAllResourceOneTimeSubSchedulePeriodsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllResourceOneTimeSubSchedulePeriods/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteAllResourceWeeklySubSchedulePeriods">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllResourceWeeklySubSchedulePeriodsRequest" message="tns:deleteAllResourceWeeklySubSchedulePeriods" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllResourceWeeklySubSchedulePeriodsResponse" message="tns:deleteAllResourceWeeklySubSchedulePeriodsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllResourceWeeklySubSchedulePeriods/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteAllResourceYearlySubSchedulePeriods">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllResourceYearlySubSchedulePeriodsRequest" message="tns:deleteAllResourceYearlySubSchedulePeriods" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllResourceYearlySubSchedulePeriodsResponse" message="tns:deleteAllResourceYearlySubSchedulePeriodsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllResourceYearlySubSchedulePeriods/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="copyResourceDeep">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/copyResourceDeepRequest" message="tns:copyResourceDeep" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/copyResourceDeepResponse" message="tns:copyResourceDeepResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/copyResourceDeep/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getResourcesByCriteria">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getResourcesByCriteriaRequest" message="tns:getResourcesByCriteria" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getResourcesByCriteriaResponse" message="tns:getResourcesByCriteriaResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getResourcesByCriteria/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteResourceMonthlySubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceMonthlySubSchedulePeriodRequest" message="tns:deleteResourceMonthlySubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceMonthlySubSchedulePeriodResponse" message="tns:deleteResourceMonthlySubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceMonthlySubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteResourceOneTimeSubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceOneTimeSubSchedulePeriodRequest" message="tns:deleteResourceOneTimeSubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceOneTimeSubSchedulePeriodResponse" message="tns:deleteResourceOneTimeSubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceOneTimeSubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteResourceWeeklySubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceWeeklySubSchedulePeriodRequest" message="tns:deleteResourceWeeklySubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceWeeklySubSchedulePeriodResponse" message="tns:deleteResourceWeeklySubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceWeeklySubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteResourceYearlySubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceYearlySubSchedulePeriodRequest" message="tns:deleteResourceYearlySubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceYearlySubSchedulePeriodResponse" message="tns:deleteResourceYearlySubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceYearlySubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getResourceSchedulesByCriteria">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getResourceSchedulesByCriteriaRequest" message="tns:getResourceSchedulesByCriteria" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getResourceSchedulesByCriteriaResponse" message="tns:getResourceSchedulesByCriteriaResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getResourceSchedulesByCriteria/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getActivities">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getActivitiesRequest" message="tns:getActivities" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getActivitiesResponse" message="tns:getActivitiesResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllActivities/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getPrograms">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getProgramsRequest" message="tns:getPrograms" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getProgramsResponse" message="tns:getProgramsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllPrograms/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getCampaigns">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getCampaignsRequest" message="tns:getCampaigns" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getCampaignsResponse" message="tns:getCampaignsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllPrograms/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getAllResourceSchedules">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllResourceSchedulesRequest" message="tns:getAllResourceSchedules" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllResourceSchedulesResponse" message="tns:getAllResourceSchedulesResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllResourceSchedules/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="insertLocationSchedule">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertLocationScheduleRequest" message="tns:insertLocationSchedule" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertLocationScheduleResponse" message="tns:insertLocationScheduleResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/insertLocationSchedule/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertLocationSchedule">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationScheduleRequest" message="tns:updateInsertLocationSchedule" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationScheduleResponse" message="tns:updateInsertLocationScheduleResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationSchedule/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteLocationScheduleByExternalId">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationScheduleByExternalIdRequest" message="tns:deleteLocationScheduleByExternalId" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationScheduleByExternalIdResponse" message="tns:deleteLocationScheduleByExternalIdResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationScheduleByExternalId/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getAllLocationSchedules">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllLocationSchedulesRequest" message="tns:getAllLocationSchedules" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllLocationSchedulesResponse" message="tns:getAllLocationSchedulesResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllLocationSchedules/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getLocationSchedulesByCriteria">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getLocationSchedulesByCriteriaRequest" message="tns:getLocationSchedulesByCriteria" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getLocationSchedulesByCriteriaResponse" message="tns:getLocationSchedulesByCriteriaResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getLocationSchedulesByCriteria/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getSecondaryResourcePoolsByCriteria">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getSecondaryResourcePoolsByCriteriaRequest" message="tns:getSecondaryResourcePoolsByCriteria" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getSecondaryResourcePoolsByCriteriaResponse" message="tns:getSecondaryResourcePoolsByCriteriaResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getSecondaryResourcePoolsByCriteria/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertLocationGroup">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationGroupRequest" message="tns:updateInsertLocationGroup" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationGroupResponse" message="tns:updateInsertLocationGroupResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationGroup/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="addLocationToLocationGroup">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/addLocationToLocationGroupRequest" message="tns:addLocationToLocationGroup" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/addLocationToLocationGroupResponse" message="tns:addLocationToLocationGroupResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/addLocationToLocationGroup/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteLocationFromLocationGroup">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationFromLocationGroupRequest" message="tns:deleteLocationFromLocationGroup" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationFromLocationGroupResponse" message="tns:deleteLocationFromLocationGroupResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationFromLocationGroup/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getLocationGroup">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getLocationGroupRequest" message="tns:getLocationGroup" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getLocationGroupResponse" message="tns:getLocationGroupResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getLocationGroup/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getAllLocationGroups">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllLocationGroupsRequest" message="tns:getAllLocationGroups" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllLocationGroupsResponse" message="tns:getAllLocationGroupsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllLocationGroups/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteLocationGroup">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationGroupRequest" message="tns:deleteLocationGroup" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationGroupResponse" message="tns:deleteLocationGroupResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationGroup/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getUserLocationLoginRights">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getUserLocationLoginRightsRequest" message="tns:getUserLocationLoginRights" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getUserLocationLoginRightsResponse" message="tns:getUserLocationLoginRightsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getUserLocationLoginRights/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="setUserLocationLoginRights">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/setUserLocationLoginRightsRequest" message="tns:setUserLocationLoginRights" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/setUserLocationLoginRightsResponse" message="tns:setUserLocationLoginRightsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/setUserLocationLoginRights/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteUserLocationLoginRights">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteUserLocationLoginRightsRequest" message="tns:deleteUserLocationLoginRights" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteUserLocationLoginRightsResponse" message="tns:deleteUserLocationLoginRightsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteUserLocationLoginRights/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getUserLocationGroupLoginRights">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getUserLocationGroupLoginRightsRequest" message="tns:getUserLocationGroupLoginRights" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getUserLocationGroupLoginRightsResponse" message="tns:getUserLocationGroupLoginRightsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getUserLocationGroupLoginRights/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="setUserLocationGroupLoginRights">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/setUserLocationGroupLoginRightsRequest" message="tns:setUserLocationGroupLoginRights" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/setUserLocationGroupLoginRightsResponse" message="tns:setUserLocationGroupLoginRightsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/setUserLocationGroupLoginRights/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteUserLocationGroupLoginRights">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteUserLocationGroupLoginRightsRequest" message="tns:deleteUserLocationGroupLoginRights" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteUserLocationGroupLoginRightsResponse" message="tns:deleteUserLocationGroupLoginRightsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteUserLocationGroupLoginRights/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertActivityToResourceAssignment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertActivityToResourceAssignment" message="tns:updateInsertActivityToResourceAssignment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertActivityToResourceAssignmentResponse" message="tns:updateInsertActivityToResourceAssignmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertActivityToResourceAssignment/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteActivityToResourceAssignment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteActivityToResourceAssignment" message="tns:deleteActivityToResourceAssignment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteActivityToResourceAssignmentResponse" message="tns:deleteActivityToResourceAssignmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteActivityToResourceAssignment/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getActivityToResourceAssignment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getActivityToResourceAssignment" message="tns:getActivityToResourceAssignment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getActivityToResourceAssignmentResponse" message="tns:getActivityToResourceAssignmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getActivityToResourceAssignment/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getAllActivityToResourceAssignment">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllActivityToResourceAssignment" message="tns:getAllActivityToResourceAssignment" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllActivityToResourceAssignmentResponse" message="tns:getAllActivityToResourceAssignmentResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllActivityToResourceAssignment/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteAllLocationMonthlySubSchedulePeriods">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllLocationMonthlySubSchedulePeriods" message="tns:deleteAllLocationMonthlySubSchedulePeriods" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllLocationMonthlySubSchedulePeriodsResponse" message="tns:deleteAllLocationMonthlySubSchedulePeriodsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllLocationMonthlySubSchedulePeriods/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteAllLocationWeeklySubSchedulePeriods">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllLocationWeeklySubSchedulePeriods" message="tns:deleteAllLocationWeeklySubSchedulePeriods" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllLocationWeeklySubSchedulePeriodsResponse" message="tns:deleteAllLocationWeeklySubSchedulePeriodsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllLocationWeeklySubSchedulePeriods/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteAllLocationYearlySubSchedulePeriods">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllLocationYearlySubSchedulePeriods" message="tns:deleteAllLocationYearlySubSchedulePeriods" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllLocationYearlySubSchedulePeriodsResponse" message="tns:deleteAllLocationYearlySubSchedulePeriodsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllLocationYearlySubSchedulePeriods/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteAllLocationOneTimeSubSchedulePeriods">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllLocationOneTimeSubSchedulePeriods" message="tns:deleteAllLocationOneTimeSubSchedulePeriods" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllLocationOneTimeSubSchedulePeriodsResponse" message="tns:deleteAllLocationOneTimeSubSchedulePeriodsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllLocationOneTimeSubSchedulePeriods/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteLocationMonthlySubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationMonthlySubSchedulePeriod" message="tns:deleteLocationMonthlySubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationMonthlySubSchedulePeriodResponse" message="tns:deleteLocationMonthlySubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationMonthlySubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteLocationWeeklySubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationWeeklySubSchedulePeriod" message="tns:deleteLocationWeeklySubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationWeeklySubSchedulePeriodResponse" message="tns:deleteLocationWeeklySubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationWeeklySubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteLocationYearlySubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationYearlySubSchedulePeriod" message="tns:deleteLocationYearlySubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationYearlySubSchedulePeriodResponse" message="tns:deleteLocationYearlySubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationYearlySubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteLocationOneTimeSubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationOneTimeSubSchedulePeriod" message="tns:deleteLocationOneTimeSubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationOneTimeSubSchedulePeriodResponse" message="tns:deleteLocationOneTimeSubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationOneTimeSubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertLocationMonthlySubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationMonthlySubSchedulePeriod" message="tns:updateInsertLocationMonthlySubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationMonthlySubSchedulePeriodResponse" message="tns:updateInsertLocationMonthlySubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationMonthlySubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertLocationWeeklySubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationWeeklySubSchedulePeriod" message="tns:updateInsertLocationWeeklySubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationWeeklySubSchedulePeriodResponse" message="tns:updateInsertLocationWeeklySubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationWeeklySubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertLocationYearlySubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationYearlySubSchedulePeriod" message="tns:updateInsertLocationYearlySubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationYearlySubSchedulePeriodResponse" message="tns:updateInsertLocationYearlySubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationYearlySubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertLocationOneTimeSubSchedulePeriod">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationOneTimeSubSchedulePeriod" message="tns:updateInsertLocationOneTimeSubSchedulePeriod" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationOneTimeSubSchedulePeriodResponse" message="tns:updateInsertLocationOneTimeSubSchedulePeriodResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertLocationOneTimeSubSchedulePeriod/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertUserToResourceVisibility">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertUserToResourceVisibilityRequest" message="tns:updateInsertUserToResourceVisibility" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertUserToResourceVisibilityResponse" message="tns:updateInsertUserToResourceVisibilityResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertUserToResourceVisibility/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteUserToResourceVisibility">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteUserToResourceVisibilityRequest" message="tns:deleteUserToResourceVisibility" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteUserToResourceVisibilityResponse" message="tns:deleteUserToResourceVisibilityResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteUserToResourceVisibility/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getUserToResourceVisibility">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getUserToResourceVisibilityRequest" message="tns:getUserToResourceVisibility" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getUserToResourceVisibilityResponse" message="tns:getUserToResourceVisibilityResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getUserToResourceVisibility/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getAllUserToResourceVisibility">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllUserToResourceVisibilityRequest" message="tns:getAllUserToResourceVisibility" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllUserToResourceVisibilityResponse" message="tns:getAllUserToResourceVisibilityResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getAllUserToResourceVisibility/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="getResourceCharacteristics">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getResourceCharacteristicsRequest" message="tns:getResourceCharacteristics" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getResourceCharacteristicsResponse" message="tns:getResourceCharacteristicsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/getResourceCharacteristics/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="updateInsertResourceCharacteristics">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceCharacteristicsRequest" message="tns:updateInsertResourceCharacteristics" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceCharacteristicsResponse" message="tns:updateInsertResourceCharacteristicsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/updateInsertResourceCharacteristics/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteAllResourceCharacteristics">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteAllResourceCharacteristicsRequest" message="tns:deleteAllResourceCharacteristics" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceAllCharacteristicsResponse" message="tns:deleteAllResourceCharacteristicsResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceCharacteristics/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteResourceOneTimeSubSchedulePeriodByDateRange">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceOneTimeSubSchedulePeriodByDateRangeRequest" message="tns:deleteResourceOneTimeSubSchedulePeriodByDateRange" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceOneTimeSubSchedulePeriodByDateRangeResponse" message="tns:deleteResourceOneTimeSubSchedulePeriodByDateRangeResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceCharacteristics/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+    <operation name="deleteLocationOneTimeSubSchedulePeriodByDateRange">
+      <input wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationOneTimeSubSchedulePeriodByDateRangeRequest" message="tns:deleteLocationOneTimeSubSchedulePeriodByDateRange" />
+      <output wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteLocationOneTimeSubSchedulePeriodByDateRangeResponse" message="tns:deleteLocationOneTimeSubSchedulePeriodByDateRangeResponse" />
+      <fault wsam:Action="http://services.timecommerce.timetrade.com/ws/ConfigurationServices/deleteResourceCharacteristics/Fault/TTConfigurationServiceException" name="TTConfigurationServiceException" message="tns:TTConfigurationServiceException" />
+    </operation>
+  </portType>
+  <binding name="ConfigurationWSBinding" type="tns:ConfigurationServices">
+    <wsp:PolicyReference URI="#UsernameToken" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="copyLocationDeep">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteActivityByExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteCampaignByExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteLocationByExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteProgramByExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteResourceByExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getActivityByExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getCampaignByExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getLocationsByCriteria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getLocationsByGeoCriteria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getProgramByExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getResourceByExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertActivity">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertCampaign">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertLocation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertMultipleActivities">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertMultipleCampaigns">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertMultipleLocations">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertMultiplePrograms">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertMultipleResources">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertProgram">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertResource">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateActivityExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateCampaignExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertActivity">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertCampaign">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertLocation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertMultipleResources">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertProgram">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertResource">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateLocationExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateProgramExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateResourceExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getResourceScheduleByExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteResourceScheduleByExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertResourceSchedule">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertResourceSchedule">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateResourceScheduleExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertResourceMonthlySubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertResourceOneTimeSubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertResourceWeeklySubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertResourceYearlySubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteAllResourceMonthlySubSchedulePeriods">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteAllResourceOneTimeSubSchedulePeriods">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteAllResourceWeeklySubSchedulePeriods">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteAllResourceYearlySubSchedulePeriods">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="copyResourceDeep">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getResourcesByCriteria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteResourceMonthlySubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteResourceOneTimeSubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteResourceWeeklySubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteResourceYearlySubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getResourceSchedulesByCriteria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getActivities">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getPrograms">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getCampaigns">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAllResourceSchedules">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertLocationSchedule">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertLocationSchedule">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteLocationScheduleByExternalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAllLocationSchedules">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getLocationSchedulesByCriteria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getSecondaryResourcePoolsByCriteria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertLocationGroup">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="addLocationToLocationGroup">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteLocationFromLocationGroup">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getLocationGroup">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAllLocationGroups">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteLocationGroup">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getUserLocationLoginRights">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="setUserLocationLoginRights">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteUserLocationLoginRights">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getUserLocationGroupLoginRights">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="setUserLocationGroupLoginRights">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteUserLocationGroupLoginRights">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertActivityToResourceAssignment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteActivityToResourceAssignment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getActivityToResourceAssignment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAllActivityToResourceAssignment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteAllLocationMonthlySubSchedulePeriods">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteAllLocationWeeklySubSchedulePeriods">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteAllLocationYearlySubSchedulePeriods">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteAllLocationOneTimeSubSchedulePeriods">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteLocationMonthlySubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteLocationWeeklySubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteLocationYearlySubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteLocationOneTimeSubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertLocationMonthlySubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertLocationWeeklySubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertLocationYearlySubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertLocationOneTimeSubSchedulePeriod">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertUserToResourceVisibility">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteUserToResourceVisibility">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getUserToResourceVisibility">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAllUserToResourceVisibility">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getResourceCharacteristics">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateInsertResourceCharacteristics">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteAllResourceCharacteristics">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteResourceOneTimeSubSchedulePeriodByDateRange">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteLocationOneTimeSubSchedulePeriodByDateRange">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="TTConfigurationServiceException">
+        <soap:fault use="literal" name="TTConfigurationServiceException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="ConfigurationServices">
+    <port name="ConfigurationWS" binding="tns:ConfigurationWSBinding">
+      <soap:address location="https://dnd01apl.na.bestbuy.com:8443/ExternalVendor/ConfigReservationSOAP" />
+    </port>
+  </service>
+</definitions>
